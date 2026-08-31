@@ -1,0 +1,401 @@
+{
+  "total_pdf_stores": 56,
+  "in_site_count": 38,
+  "not_in_site_count": 18,
+  "in_site": [
+    {
+      "no": "01",
+      "name": "炘安美學",
+      "address": "大埔路642號1樓",
+      "category": "其他美容美體/化妝品零售",
+      "status": "可查到現行店家"
+    },
+    {
+      "no": "02",
+      "name": "軍茶",
+      "address": "大埔路648號",
+      "category": "手搖飲料店",
+      "status": "可查到營業中"
+    },
+    {
+      "no": "03",
+      "name": "龍鹽酥雞",
+      "address": "大埔路658號",
+      "category": "餐飲／鹽酥雞",
+      "status": "近期仍有外送與稅籍資料"
+    },
+    {
+      "no": "04",
+      "name": "阿婆拉仔麵",
+      "address": "大埔路",
+      "category": "麵食／小吃",
+      "status": "近期外送平台有紀錄"
+    },
+    {
+      "no": "05",
+      "name": "品茶道",
+      "address": "大埔路690號",
+      "category": "飲料店／冰品",
+      "status": "可查到店家資料"
+    },
+    {
+      "no": "07",
+      "name": "詠立水果行",
+      "address": "大埔路727號",
+      "category": "水果零售批發",
+      "status": "營業中"
+    },
+    {
+      "no": "08",
+      "name": "五八地瓜球",
+      "address": "大埔路723號",
+      "category": "地瓜球／小吃",
+      "status": "地址可查，平台曾記停止營業"
+    },
+    {
+      "no": "09",
+      "name": "嵐田拉麵",
+      "address": "大埔路691號",
+      "category": "拉麵／餐飲",
+      "status": "近期仍有營業紀錄"
+    },
+    {
+      "no": "10",
+      "name": "泰冰涼",
+      "address": "大埔路633號",
+      "category": "飲料／冰品",
+      "status": "可查到地址"
+    },
+    {
+      "no": "11",
+      "name": "蒸餃之家",
+      "address": "大埔路623號",
+      "category": "中式餐館/蒸餃",
+      "status": "營業中"
+    },
+    {
+      "no": "12",
+      "name": "辰品屋豆漿",
+      "address": "大埔路619號",
+      "category": "中式早宵夜",
+      "status": "營業中"
+    },
+    {
+      "no": "13",
+      "name": "駿哥炸魷魚",
+      "address": "大埔路619號",
+      "category": "炸物／小吃",
+      "status": "營業中"
+    },
+    {
+      "no": "14",
+      "name": "正強灶咖",
+      "address": "大埔路585號",
+      "category": "主食便當/美食廣場",
+      "status": "營業中"
+    },
+    {
+      "no": "16",
+      "name": "滿大碗",
+      "address": "大埔路567號",
+      "category": "滷味宵夜",
+      "status": "有公開紀錄"
+    },
+    {
+      "no": "19",
+      "name": "茜芭の鍋燒",
+      "address": "大埔路572之1號",
+      "category": "鍋燒／餐飲",
+      "status": "營業中"
+    },
+    {
+      "no": "22",
+      "name": "嘉義火雞肉飯 菜公店",
+      "address": "大埔路636號",
+      "category": "火雞肉飯／便當",
+      "status": "營業中"
+    },
+    {
+      "no": "24",
+      "name": "豆油伯",
+      "address": "大埔路553號",
+      "category": "便當／餐飲",
+      "status": "營業中"
+    },
+    {
+      "no": "25",
+      "name": "精工堂",
+      "address": "大埔路535號",
+      "category": "眼鏡／眼鏡行",
+      "status": "營業中"
+    },
+    {
+      "no": "26",
+      "name": "有種鹹水雞",
+      "address": "大埔路527號",
+      "category": "鹹水雞",
+      "status": "已新增在網站中"
+    },
+    {
+      "no": "27",
+      "name": "風味食堂",
+      "address": "大埔路523號",
+      "category": "餐館／炒麵餐飲",
+      "status": "營業中"
+    },
+    {
+      "no": "28",
+      "name": "無飲",
+      "address": "大埔路499號",
+      "category": "飲料店",
+      "status": "營業中"
+    },
+    {
+      "no": "30",
+      "name": "港式鮮肉包",
+      "address": "大埔路485巷33號",
+      "category": "港式點心／包子",
+      "status": "郎港式鮮肉包"
+    },
+    {
+      "no": "31",
+      "name": "皇品牛肉麵",
+      "address": "大埔路485巷35號",
+      "category": "牛肉麵／餐飲",
+      "status": "營業中"
+    },
+    {
+      "no": "32",
+      "name": "狐狸糊塗愛上魚",
+      "address": "大埔路485巷7號",
+      "category": "甜品/雞蛋糕",
+      "status": "營業中"
+    },
+    {
+      "no": "33",
+      "name": "大埔臭豆腐",
+      "address": "大埔路477號",
+      "category": "臭豆腐／小吃",
+      "status": "營業中"
+    },
+    {
+      "no": "34",
+      "name": "印第安便利茶飲專賣",
+      "address": "大埔路471號",
+      "category": "飲料店",
+      "status": "營業中"
+    },
+    {
+      "no": "35",
+      "name": "點頭大餅",
+      "address": "大埔路441號",
+      "category": "大餅／傳統小吃",
+      "status": "營業中"
+    },
+    {
+      "no": "36",
+      "name": "我家炸雞",
+      "address": "大埔路440號",
+      "category": "炸雞／小吃",
+      "status": "營業中"
+    },
+    {
+      "no": "37",
+      "name": "吳家紅茶冰",
+      "address": "大埔路442號",
+      "category": "飲料店",
+      "status": "營業中"
+    },
+    {
+      "no": "38",
+      "name": "鮮食煮義",
+      "address": "大埔路468號",
+      "category": "健康餐盒/熟食",
+      "status": "營業中"
+    },
+    {
+      "no": "39",
+      "name": "阿忠刈包",
+      "address": "大埔路552號",
+      "category": "刈包／小吃",
+      "status": "營業中"
+    },
+    {
+      "no": "40",
+      "name": "鑫鮮味臭臭鍋",
+      "address": "大埔路531號",
+      "category": "火鍋／餐飲",
+      "status": "營業中"
+    },
+    {
+      "no": "41",
+      "name": "牛釜山 大埔店",
+      "address": "大埔路393號",
+      "category": "鐵板牛排/餐飲",
+      "status": "營業中"
+    },
+    {
+      "no": "43",
+      "name": "王記食堂",
+      "address": "大埔路378號",
+      "category": "家庭料理/便當",
+      "status": "營業中"
+    },
+    {
+      "no": "44",
+      "name": "得魚食堂",
+      "address": "大埔路380號",
+      "category": "日式定食/鮮魚",
+      "status": "營業中"
+    },
+    {
+      "no": "45",
+      "name": "神鬼炸雞店",
+      "address": "大埔路466號",
+      "category": "炸雞／小吃",
+      "status": "營業中"
+    },
+    {
+      "no": "46",
+      "name": "大埔幸福愛潤餅",
+      "address": "大埔路533號",
+      "category": "潤餅／傳統小吃",
+      "status": "營業中"
+    },
+    {
+      "no": "47",
+      "name": "雞雞叫鹽水雞",
+      "address": "大埔路413號",
+      "category": "鹽水雞／食品業",
+      "status": "營業中"
+    }
+  ],
+  "not_in_site": [
+    {
+      "no": "06",
+      "name": "晶兆購商行",
+      "address": "崙平南路161巷33號1樓",
+      "category": "其他電子購物及郵購",
+      "status": "有商業登記，非大埔路實體店"
+    },
+    {
+      "no": "15",
+      "name": "久元一口煎餃",
+      "address": "大埔路",
+      "category": "煎餃／餐飲",
+      "status": "未查到足夠資料"
+    },
+    {
+      "no": "17",
+      "name": "南丸一番揪生魚片",
+      "address": "大埔路周邊",
+      "category": "生魚片／餐飲",
+      "status": "未查到足夠資料"
+    },
+    {
+      "no": "18",
+      "name": "心滷味",
+      "address": "大埔路周邊",
+      "category": "滷味",
+      "status": "未查到足夠資料"
+    },
+    {
+      "no": "20",
+      "name": "大埔大腸包小腸",
+      "address": "大埔路周邊",
+      "category": "大腸包小腸／小吃",
+      "status": "未查到足夠資料"
+    },
+    {
+      "no": "21",
+      "name": "芭樂咬一口",
+      "address": "大埔路周邊",
+      "category": "水果／飲品",
+      "status": "未查到足夠資料"
+    },
+    {
+      "no": "23",
+      "name": "金村三角骨",
+      "address": "大埔路638號",
+      "category": "炸物／三角骨",
+      "status": "營業中"
+    },
+    {
+      "no": "29",
+      "name": "佬台南鍋燒意麵",
+      "address": "大埔路497號",
+      "category": "餐飲／麵食",
+      "status": "營業中"
+    },
+    {
+      "no": "42",
+      "name": "早點",
+      "address": "大埔路周邊",
+      "category": "早餐／餐飲",
+      "status": "名稱過於一般，未查到具體門市"
+    },
+    {
+      "no": "48",
+      "name": "曦流咖啡",
+      "address": "中興路219號",
+      "category": "咖啡／餐飲",
+      "status": "營業中(電話04-7115008)"
+    },
+    {
+      "no": "49",
+      "name": "熊熊想吃－窯烤披薩",
+      "address": "大埔路671號",
+      "category": "窯烤披薩／餐飲",
+      "status": "外送平台有紀錄"
+    },
+    {
+      "no": "50",
+      "name": "滿竹坊",
+      "address": "延平路389巷2號1樓",
+      "category": "飲料店",
+      "status": "商業登記顯示歇業"
+    },
+    {
+      "no": "51",
+      "name": "非你莫薯",
+      "address": "大埔路614號",
+      "category": "炸物／熟食",
+      "status": "電話0958-376677"
+    },
+    {
+      "no": "52",
+      "name": "88 pasta",
+      "address": "大埔路周邊",
+      "category": "義大利麵／餐飲",
+      "status": "未查到足夠資料"
+    },
+    {
+      "no": "53",
+      "name": "豆花53家",
+      "address": "大埔路周邊",
+      "category": "豆花／甜品",
+      "status": "未查到足夠資料"
+    },
+    {
+      "no": "54",
+      "name": "尚品芋圓",
+      "address": "大埔路685號1樓",
+      "category": "芋圓/甜品/飲料",
+      "status": "有商業登記(簡珮君)"
+    },
+    {
+      "no": "55",
+      "name": "芊億飯包",
+      "address": "大埔路693號",
+      "category": "飯包／餐飲",
+      "status": "衛生局評核優良"
+    },
+    {
+      "no": "56",
+      "name": "進爆大埔店",
+      "address": "大埔路周邊",
+      "category": "餐飲",
+      "status": "未查到足夠資料"
+    }
+  ]
+}

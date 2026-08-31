@@ -1,0 +1,2986 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大埔美食商圈 ‧ LINE 線上集點活動 | 彰化市大埔商圈發展協會官方指南</title>
+  <meta name="description" content="彰化市大埔美食商圈 LINE 線上集點活動正式開跑！吃美食、集點數、拿好禮！收錄全區 61 家精選美食名店，消費滿額即可掃碼集點，集滿 5 點享雙重好禮！">
+  
+  <!-- Google Fonts: Noto Sans TC & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       DESIGN SYSTEM - 台灣地方品牌 × 現代旅遊指南 × 高質感美食平台
+       ========================================================================== */
+    :root {
+      /* Brand Color Palette */
+      --primary-900: #7c2d12;
+      --primary-800: #9a3412;
+      --primary-700: #c2410c; /* 主磚紅/深橘紅 */
+      --primary-600: #ea580c;
+      --primary-500: #f97316;
+      --primary-100: #ffedd5;
+      --primary-50:  #fff7ed;
+
+      /* Line Brand Green Accent */
+      --line-green: #06c755;
+      --line-green-dark: #05a847;
+      --line-green-light: #e6f9ed;
+
+      /* Secondary Warm Gold / Honey Amber */
+      --secondary-700: #b45309;
+      --secondary-500: #d97706;
+      --secondary-400: #f59e0b;
+      --secondary-100: #fef3c7;
+      --secondary-50:  #fffbeb;
+
+      /* Neutral & Canvas Tones (Warm Oatmeal & Cream Paper) */
+      --bg-base: #faf8f5;
+      --bg-surface: #ffffff;
+      --bg-subtle: #f5f2eb;
+      --bg-muted: #eeea60;
+
+      /* Typography Charcoal Ink */
+      --text-main: #1c1917;    /* 深墨灰 */
+      --text-body: #44403c;    /* 正文墨灰 */
+      --text-muted: #78716c;   /* 次要文字 */
+      --text-light: #a8a29e;   /* 淺灰 */
+
+      /* State & Accents */
+      --open-green: #15803d;
+      --open-bg: #dcfce7;
+      --closed-orange: #c2410c;
+      --closed-bg: #fee2e2;
+      --rating-gold: #eab308;
+
+      /* Borders & Shadows */
+      --border-subtle: #e7e5e4;
+      --border-card: #f0ede6;
+      --border-focus: #ea580c;
+      
+      --shadow-xs: 0 1px 2px 0 rgba(28, 25, 23, 0.04);
+      --shadow-sm: 0 2px 8px -1px rgba(28, 25, 23, 0.06), 0 1px 3px -1px rgba(28, 25, 23, 0.03);
+      --shadow-md: 0 10px 25px -4px rgba(28, 25, 23, 0.07), 0 4px 10px -2px rgba(28, 25, 23, 0.03);
+      --shadow-lg: 0 20px 35px -5px rgba(28, 25, 23, 0.12), 0 8px 16px -4px rgba(28, 25, 23, 0.05);
+      --shadow-modal: 0 25px 60px -15px rgba(0, 0, 0, 0.4);
+
+      /* Layout & Spacing */
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+      --container-max: 1240px;
+
+      /* Transitions */
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --dur-fast: 180ms;
+      --dur-normal: 260ms;
+    }
+
+    /* Global Reset & Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-base);
+      color: var(--text-body);
+      line-height: 1.65;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    .num-font {
+      font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif;
+      font-feature-settings: "tnum";
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    button, input, select {
+      font-family: inherit;
+    }
+
+    /* Container Utility */
+    .container {
+      max-width: var(--container-max);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    /* ==========================================================================
+       TOP GLOBAL HEADER / NAVBAR
+       ========================================================================== */
+    .site-nav {
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-subtle);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
+      background-color: rgba(255, 255, 255, 0.95);
+      transition: box-shadow var(--dur-normal) var(--ease-out);
+    }
+
+    .site-nav.scrolled {
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      gap: 1rem;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-logo-img {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      box-shadow: var(--shadow-xs);
+      object-fit: cover;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .brand-tag {
+      background: var(--line-green);
+      color: #ffffff;
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 2px 7px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 5px rgba(6, 199, 85, 0.35);
+    }
+
+    .brand-sub {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.02em;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-event-quick {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      background: linear-gradient(135deg, #06c755, #05a847);
+      border: none;
+      border-radius: var(--radius-full);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #ffffff;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(6, 199, 85, 0.28);
+      transition: all var(--dur-fast) var(--ease-out);
+    }
+
+    .btn-event-quick:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(6, 199, 85, 0.4);
+    }
+
+    .btn-fav-drawer {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-full);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-body);
+      cursor: pointer;
+      transition: all var(--dur-fast) var(--ease-out);
+    }
+
+    .btn-fav-drawer:hover {
+      background: #ffffff;
+      border-color: var(--primary-500);
+      color: var(--primary-700);
+      box-shadow: var(--shadow-xs);
+    }
+
+    .fav-counter {
+      background: var(--primary-700);
+      color: #ffffff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 1px 7px;
+      border-radius: var(--radius-full);
+    }
+
+    /* ==========================================================================
+       HERO EDITORIAL SECTION
+       ========================================================================== */
+    .hero-section {
+      position: relative;
+      padding: 2.75rem 0 2.25rem 0;
+      background: radial-gradient(circle at 85% 20%, rgba(254, 243, 199, 0.6) 0%, rgba(250, 248, 245, 0) 50%),
+                  radial-gradient(circle at 10% 80%, rgba(255, 237, 213, 0.7) 0%, rgba(250, 248, 245, 0) 60%);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+
+    .hero-badge-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--line-green-light);
+      border: 1px solid rgba(6, 199, 85, 0.3);
+      padding: 5px 14px;
+      border-radius: var(--radius-full);
+      margin-bottom: 1rem;
+    }
+
+    .hero-badge-dot {
+      width: 7px;
+      height: 7px;
+      background-color: var(--line-green);
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba(6, 199, 85, 0.25);
+    }
+
+    .hero-badge-text {
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: var(--line-green-dark);
+      letter-spacing: 0.04em;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 3.8vw, 3rem);
+      font-weight: 900;
+      color: var(--text-main);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title .accent-text {
+      color: var(--line-green-dark);
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero-title .accent-text::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 2px;
+      width: 100%;
+      height: 8px;
+      background-color: rgba(6, 199, 85, 0.22);
+      z-index: -1;
+      border-radius: 4px;
+    }
+
+    .hero-lead {
+      font-size: 1.05rem;
+      color: var(--text-body);
+      max-width: 580px;
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+
+    .hero-lead strong {
+      color: var(--primary-900);
+    }
+
+    /* Key Statistics Chips */
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .stat-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-card);
+      padding: 7px 14px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-xs);
+    }
+
+    .stat-chip .val {
+      font-weight: 800;
+      color: var(--text-main);
+      font-size: 1rem;
+    }
+
+    .stat-chip .lbl {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Hero Emblem Right side */
+    .hero-emblem-stage {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .emblem-composite {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      padding: 18px 24px;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(231, 229, 228, 0.8);
+      box-shadow: var(--shadow-md);
+    }
+
+    .emblem-logo-wrap {
+      width: 105px;
+      height: 105px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 2px solid var(--border-card);
+      background: #ffffff;
+      flex-shrink: 0;
+    }
+
+    .emblem-logo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .emblem-mascot-wrap {
+      width: 145px;
+      height: 145px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      flex-shrink: 0;
+      animation: mascotGentleFloat 3.2s ease-in-out infinite;
+      cursor: pointer;
+    }
+
+    @keyframes mascotGentleFloat {
+      0% {
+        transform: translateY(0px) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-9px) rotate(1.5deg);
+      }
+      100% {
+        transform: translateY(0px) rotate(0deg);
+      }
+    }
+
+    .emblem-mascot-wrap:hover {
+      animation-play-state: paused;
+      transform: scale(1.06);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .emblem-mascot-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.14));
+    }
+
+    .emblem-caption {
+      margin-top: 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    /* ==========================================================================
+       PROMINENT LINE ACTIVITY EVENT SHOWCASE SECTION
+       ========================================================================== */
+    .activity-section {
+      padding: 2.25rem 0 2.75rem 0;
+      background: #ffffff;
+      border-bottom: 2px solid #f0ede6;
+    }
+
+    .activity-card-container {
+      background: linear-gradient(135deg, #fffbf5 0%, #fff7ee 60%, #f0fdf4 100%);
+      border: 2px solid #fed7aa;
+      border-radius: var(--radius-lg);
+      padding: 2rem 2.25rem;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .activity-card-container::before {
+      content: "";
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(6, 199, 85, 0.15) 0%, rgba(6, 199, 85, 0) 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .activity-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    @media (max-width: 860px) {
+      .activity-grid {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+      }
+      .activity-card-container {
+        padding: 1.5rem;
+      }
+    }
+
+    .activity-poster-wrap {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(194, 65, 12, 0.18);
+      border: 3px solid #ffffff;
+      background: #ffffff;
+      transition: transform var(--dur-normal) var(--ease-out);
+    }
+
+    .activity-poster-wrap:hover {
+      transform: scale(1.02);
+    }
+
+    .activity-poster-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .activity-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .activity-header {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .activity-ribbon {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--line-green);
+      color: #ffffff;
+      font-size: 0.82rem;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      width: fit-content;
+      letter-spacing: 0.04em;
+    }
+
+    .activity-title {
+      font-size: clamp(1.6rem, 2.5vw, 2.1rem);
+      font-weight: 900;
+      color: var(--text-main);
+      line-height: 1.25;
+    }
+
+    .activity-slogan {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--primary-700);
+      letter-spacing: 0.02em;
+    }
+
+    /* 4-Step Process Grid */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 0.25rem;
+    }
+
+    @media (max-width: 600px) {
+      .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .step-box {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-shadow: var(--shadow-xs);
+      transition: all var(--dur-fast) var(--ease-out);
+    }
+
+    .step-box:hover {
+      border-color: var(--line-green);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .step-icon {
+      font-size: 1.5rem;
+      margin-bottom: 4px;
+    }
+
+    .step-title {
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 2px;
+    }
+
+    .step-desc {
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      line-height: 1.35;
+    }
+
+    /* Bottom Highlight Banner */
+    .activity-reward-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, #ea580c, #c2410c);
+      color: #ffffff;
+      padding: 12px 18px;
+      border-radius: var(--radius-md);
+      box-shadow: 0 4px 14px rgba(194, 65, 12, 0.25);
+    }
+
+    .reward-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .reward-text {
+      font-size: 0.95rem;
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    .reward-text span {
+      color: #fef08a;
+      font-weight: 900;
+      font-size: 1.05rem;
+    }
+
+    .reward-actions {
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+
+    .btn-scan-qr {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ffffff;
+      color: #c2410c;
+      font-size: 0.85rem;
+      font-weight: 800;
+      padding: 7px 16px;
+      border-radius: var(--radius-full);
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      transition: all var(--dur-fast) var(--ease-out);
+    }
+
+    .btn-scan-qr:hover {
+      background: #fff7ed;
+      transform: scale(1.04);
+    }
+
+    /* ==========================================================================
+       SEARCH, FILTER & CATEGORY TABS (CONTROL CENTER)
+       ========================================================================== */
+    .control-section {
+      padding: 2.5rem 0 1.25rem 0;
+    }
+
+    .control-panel {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 1.75rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .search-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      margin-bottom: 1.25rem;
+    }
+
+    @media (max-width: 640px) {
+      .search-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .search-input-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-icon-left {
+      position: absolute;
+      left: 16px;
+      font-size: 1.1rem;
+      color: var(--text-light);
+      pointer-events: none;
+    }
+
+    .search-input {
+      width: 100%;
+      height: 48px;
+      padding: 0 45px 0 46px;
+      background: var(--bg-subtle);
+      border: 1.5px solid transparent;
+      border-radius: var(--radius-md);
+      font-size: 0.98rem;
+      color: var(--text-main);
+      transition: all var(--dur-fast) var(--ease-out);
+      outline: none;
+    }
+
+    .search-input:focus {
+      background: #ffffff;
+      border-color: var(--primary-600);
+      box-shadow: 0 0 0 3px var(--primary-100);
+    }
+
+    .search-clear-btn {
+      position: absolute;
+      right: 12px;
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      color: var(--text-light);
+      cursor: pointer;
+      display: none;
+      padding: 4px;
+    }
+
+    .search-clear-btn:hover {
+      color: var(--text-body);
+    }
+
+    .sort-select-wrap {
+      position: relative;
+      min-width: 180px;
+    }
+
+    .sort-select {
+      width: 100%;
+      height: 48px;
+      padding: 0 36px 0 16px;
+      background: var(--bg-subtle);
+      border: 1.5px solid transparent;
+      border-radius: var(--radius-md);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-body);
+      outline: none;
+      cursor: pointer;
+      appearance: none;
+      transition: all var(--dur-fast) var(--ease-out);
+    }
+
+    .sort-select:focus {
+      background: #ffffff;
+      border-color: var(--primary-600);
+      box-shadow: 0 0 0 3px var(--primary-100);
+    }
+
+    .sort-arrow {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* Category Pill Badges (Horizontally scrollable) */
+    .category-pills {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scrollbar-width: thin;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .category-pills::-webkit-scrollbar {
+      height: 4px;
+    }
+    .category-pills::-webkit-scrollbar-thumb {
+      background: var(--border-subtle);
+      border-radius: 4px;
+    }
+
+    .cat-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      background: var(--bg-subtle);
+      border: 1px solid transparent;
+      border-radius: var(--radius-full);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-body);
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all var(--dur-fast) var(--ease-out);
+      flex-shrink: 0;
+    }
+
+    .cat-pill:hover {
+      background: #ffffff;
+      border-color: var(--border-subtle);
+      color: var(--primary-700);
+    }
+
+    .cat-pill.active {
+      background: var(--text-main);
+      color: #ffffff;
+      border-color: var(--text-main);
+      box-shadow: var(--shadow-xs);
+    }
+
+    .cat-count-badge {
+      background: rgba(0, 0, 0, 0.08);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: var(--radius-full);
+    }
+
+    .cat-pill.active .cat-count-badge {
+      background: rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+    }
+
+    /* Quick Toggle Filters */
+    .quick-toggles {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-card);
+    }
+
+    .toggle-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      user-select: none;
+      transition: all var(--dur-fast) var(--ease-out);
+    }
+
+    .toggle-chip:hover {
+      border-color: var(--border-focus);
+      color: var(--text-main);
+    }
+
+    .toggle-chip.active {
+      background: var(--primary-50);
+      border-color: var(--primary-600);
+      color: var(--primary-800);
+      font-weight: 700;
+    }
+
+    .result-status-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+      padding: 0 4px;
+    }
+
+    .result-count {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .result-count span {
+      color: var(--primary-700);
+    }
+
+    /* ==========================================================================
+       STORE CARD GRID
+       ========================================================================== */
+    .stores-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    @media (max-width: 480px) {
+      .stores-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Card Item */
+    .store-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--dur-normal) var(--ease-out),
+                  box-shadow var(--dur-normal) var(--ease-out),
+                  border-color var(--dur-normal) var(--ease-out);
+      cursor: pointer;
+      position: relative;
+    }
+
+    .store-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: #fed7aa;
+    }
+
+    /* Image Stage 16:10 */
+    .card-photo-wrap {
+      position: relative;
+      width: 100%;
+      padding-top: 60%; /* 16:10 aspect ratio */
+      background: var(--bg-subtle);
+      overflow: hidden;
+    }
+
+    .card-photo-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s var(--ease-out);
+    }
+
+    .store-card:hover .card-photo-img {
+      transform: scale(1.05);
+    }
+
+    /* Card Badges Overlay */
+    .card-top-badges {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      right: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .door-badge {
+      background: rgba(28, 25, 23, 0.85);
+      backdrop-filter: blur(6px);
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-xs);
+    }
+
+    .btn-fav-heart {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(6px);
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      pointer-events: auto;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--dur-fast) var(--ease-out);
+      font-size: 1rem;
+    }
+
+    .btn-fav-heart:hover {
+      transform: scale(1.15);
+      background: #ffffff;
+    }
+
+    .btn-fav-heart.active {
+      color: #dc2626;
+    }
+
+    .card-status-pill {
+      position: absolute;
+      bottom: 10px;
+      left: 12px;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(4px);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--open-green);
+      box-shadow: var(--shadow-xs);
+    }
+
+    .card-rating-pill {
+      position: absolute;
+      bottom: 10px;
+      right: 12px;
+      background: rgba(28, 25, 23, 0.85);
+      backdrop-filter: blur(4px);
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .rating-star {
+      color: #facc15;
+    }
+
+    /* Card Content Body */
+    .card-body {
+      padding: 1.25rem 1.25rem 1.1rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card-title-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .card-store-name {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.35;
+    }
+
+    .card-category-tag {
+      background: var(--bg-subtle);
+      color: var(--text-muted);
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 4px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .card-store-tag {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--primary-700);
+      margin-bottom: 8px;
+    }
+
+    .card-address-row {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    /* Signature Dish Capsules */
+    .card-dishes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: auto;
+      margin-bottom: 14px;
+    }
+
+    .dish-tag {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-card);
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--text-body);
+      padding: 2px 8px;
+      border-radius: var(--radius-sm);
+    }
+
+    /* Card Footer CTA */
+    .card-footer {
+      padding-top: 10px;
+      border-top: 1px solid var(--border-card);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--primary-700);
+    }
+
+    .card-footer .arrow {
+      transition: transform var(--dur-fast) var(--ease-out);
+    }
+
+    .store-card:hover .card-footer .arrow {
+      transform: translateX(4px);
+    }
+
+    /* ==========================================================================
+       EMPTY STATE
+       ========================================================================== */
+    .empty-state {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 4rem 1rem;
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      border: 1px dashed var(--border-subtle);
+    }
+
+    .empty-state-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .empty-state-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 0.5rem;
+    }
+
+    .empty-state-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    /* ==========================================================================
+       STREET MAP & AXIS SECTION
+       ========================================================================== */
+    .map-section {
+      padding: 3rem 0;
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .map-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .map-section-title {
+      font-size: 1.75rem;
+      font-weight: 900;
+      color: var(--text-main);
+      margin-bottom: 0.5rem;
+    }
+
+    .map-section-sub {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .street-axis-container {
+      background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+      border: 1px solid #fed7aa;
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .street-axis-line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      margin: 2rem 0;
+    }
+
+    .street-axis-line::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: #ea580c;
+      border-radius: 3px;
+      z-index: 1;
+    }
+
+    .axis-node {
+      position: relative;
+      z-index: 2;
+      background: #ffffff;
+      border: 3px solid #ea580c;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: var(--primary-900);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .axis-stores-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 1.5rem;
+      justify-content: center;
+    }
+
+    .axis-store-pin {
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
+      padding: 5px 12px;
+      border-radius: var(--radius-md);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-body);
+      cursor: pointer;
+      transition: all var(--dur-fast) var(--ease-out);
+    }
+
+    .axis-store-pin:hover {
+      background: var(--primary-700);
+      color: #ffffff;
+      border-color: var(--primary-700);
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       STORE DETAIL MODAL / BOTTOM SHEET
+       ========================================================================== */
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(12, 10, 9, 0.65);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: all var(--dur-normal) var(--ease-out);
+    }
+
+    .modal-backdrop.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-card {
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      max-width: 640px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: var(--shadow-modal);
+      position: relative;
+      transform: translateY(20px) scale(0.97);
+      transition: transform var(--dur-normal) var(--ease-out);
+    }
+
+    .modal-backdrop.active .modal-card {
+      transform: translateY(0) scale(1);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(28, 25, 23, 0.6);
+      backdrop-filter: blur(4px);
+      color: #ffffff;
+      border: none;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      transition: background var(--dur-fast);
+    }
+
+    .modal-close-btn:hover {
+      background: rgba(28, 25, 23, 0.9);
+    }
+
+    .modal-hero-photo {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      background: var(--bg-subtle);
+    }
+
+    .modal-body {
+      padding: 1.75rem;
+    }
+
+    .modal-title-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+
+    .modal-title {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--text-main);
+    }
+
+    .modal-door-tag {
+      background: var(--primary-100);
+      color: var(--primary-800);
+      font-size: 0.8rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+    }
+
+    .modal-tag {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--primary-700);
+      margin-bottom: 1.25rem;
+    }
+
+    /* Key Specs Grid in Modal */
+    .modal-specs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 1.5rem;
+      background: var(--bg-subtle);
+      padding: 14px;
+      border-radius: var(--radius-md);
+    }
+
+    .spec-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.85rem;
+    }
+
+    .spec-icon {
+      font-size: 1rem;
+      color: var(--primary-700);
+      margin-top: 1px;
+    }
+
+    .spec-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .spec-lbl {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .spec-val {
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .modal-section-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .modal-description {
+      font-size: 0.92rem;
+      color: var(--text-body);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .modal-dishes-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 1.75rem;
+    }
+
+    .modal-dish-pill {
+      background: var(--secondary-50);
+      border: 1px solid var(--secondary-100);
+      color: var(--secondary-700);
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: var(--radius-md);
+    }
+
+    /* Action Buttons in Modal */
+    .modal-actions {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      gap: 10px;
+    }
+
+    .btn-nav-map {
+      background: linear-gradient(135deg, var(--primary-600), var(--primary-700));
+      color: #ffffff;
+      border: none;
+      height: 46px;
+      border-radius: var(--radius-md);
+      font-size: 0.95rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+      transition: all var(--dur-fast) var(--ease-out);
+    }
+
+    .btn-nav-map:hover {
+      background: var(--primary-800);
+      transform: translateY(-1px);
+    }
+
+    .btn-copy-addr {
+      height: 46px;
+      padding: 0 16px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-body);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background var(--dur-fast);
+    }
+
+    .btn-copy-addr:hover {
+      background: #ffffff;
+    }
+
+    .btn-modal-fav {
+      width: 46px;
+      height: 46px;
+      border-radius: var(--radius-md);
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-subtle);
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all var(--dur-fast);
+    }
+
+    .btn-modal-fav.active {
+      background: #fee2e2;
+      border-color: #fca5a5;
+      color: #dc2626;
+    }
+
+    /* ==========================================================================
+       PROMINENT DISCLAIMER / ANNOUNCEMENT BANNER
+       ========================================================================== */
+    .disclaimer-section {
+      padding: 0 0 1.25rem 0;
+    }
+
+    .disclaimer-card {
+      background: linear-gradient(135deg, #fffbeb 0%, #fff7ed 100%);
+      border: 1.5px solid #fed7aa;
+      border-radius: var(--radius-lg);
+      padding: 1.1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      box-shadow: 0 4px 16px rgba(234, 88, 12, 0.06);
+      transition: all var(--dur-normal) var(--ease-out);
+    }
+
+    .disclaimer-card:hover {
+      border-color: #fdba74;
+      box-shadow: 0 6px 20px rgba(234, 88, 12, 0.1);
+    }
+
+    .disclaimer-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #ea580c;
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 800;
+      padding: 5px 14px;
+      border-radius: var(--radius-full);
+      white-space: nowrap;
+      flex-shrink: 0;
+      letter-spacing: 0.05em;
+      box-shadow: 0 2px 6px rgba(234, 88, 12, 0.3);
+    }
+
+    .disclaimer-text {
+      font-size: 0.93rem;
+      color: #9a3412;
+      line-height: 1.65;
+      font-weight: 600;
+    }
+
+    .modal-disclaimer {
+      background: #fffbeb;
+      border: 1px solid #fed7aa;
+      border-radius: var(--radius-sm);
+      padding: 9px 14px;
+      font-size: 0.82rem;
+      color: #9a3412;
+      line-height: 1.55;
+      margin: 1.25rem 0 0.5rem 0;
+      font-weight: 500;
+    }
+
+    /* ==========================================================================
+       AUTHENTIC DIGITAL LED CLOCK DISPLAY & TAIPEI TIME SYNC
+       ========================================================================== */
+    .nav-taipei-clock {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #0f172a;
+      border: 1px solid #334155;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #94a3b8;
+      white-space: nowrap;
+      transition: all var(--dur-fast);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-taipei-clock .clock-time {
+      color: #38bdf8;
+      font-family: 'Courier New', 'Consolas', 'Roboto Mono', 'SF Mono', monospace;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      font-size: 0.92rem;
+      text-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
+    }
+
+    @media (max-width: 900px) {
+      .nav-taipei-clock {
+        display: none;
+      }
+    }
+
+    .digital-clock-card {
+      background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+      border: 1.5px solid #334155;
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 1.75rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+    }
+
+    .digital-clock-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-bottom: 0.85rem;
+      border-bottom: 1px solid #334155;
+      margin-bottom: 1rem;
+    }
+
+    .clock-badge-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .live-blink-dot {
+      width: 10px;
+      height: 10px;
+      background: #10b981;
+      border-radius: 50%;
+      display: inline-block;
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+      animation: pulse-green 2s infinite;
+    }
+
+    .clock-badge-text {
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: #cbd5e1;
+      letter-spacing: 0.05em;
+    }
+
+    .sync-status-text {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #34d399;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      white-space: nowrap;
+    }
+
+    .digital-clock-body {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .digital-date-section {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .date-icon {
+      font-size: 1.5rem;
+    }
+
+    .date-text {
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: #f8fafc;
+      letter-spacing: 0.05em;
+      font-family: 'Courier New', 'Consolas', 'Roboto Mono', 'SF Mono', monospace;
+    }
+
+    .weekday-tag {
+      background: #ea580c;
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 900;
+      padding: 4px 12px;
+      border-radius: 6px;
+      letter-spacing: 0.05em;
+      box-shadow: 0 2px 6px rgba(234, 88, 12, 0.4);
+    }
+
+    .digital-digits-display {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: #020617;
+      border: 1.5px solid #1e293b;
+      padding: 8px 16px;
+      border-radius: 12px;
+      box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .digit-box {
+      text-align: center;
+      min-width: 58px;
+    }
+
+    .digit-num {
+      display: block;
+      font-family: 'Courier New', 'Consolas', 'Roboto Mono', 'SF Mono', monospace;
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: #38bdf8;
+      line-height: 1;
+      text-shadow: 0 0 14px rgba(56, 189, 248, 0.6);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .digit-box-sec .digit-num {
+      color: #34d399;
+      text-shadow: 0 0 14px rgba(52, 211, 153, 0.6);
+    }
+
+    .digit-label {
+      display: block;
+      font-size: 0.68rem;
+      font-weight: 800;
+      color: #64748b;
+      margin-top: 4px;
+      letter-spacing: 0.05em;
+    }
+
+    .digit-colon {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #38bdf8;
+      line-height: 1;
+      margin: 0 2px;
+      animation: blink-colon 1s infinite;
+      align-self: flex-start;
+      margin-top: 2px;
+    }
+
+    @keyframes blink-colon {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.25; }
+    }
+
+    .digital-clock-footer {
+      margin-top: 0.9rem;
+      padding-top: 0.75rem;
+      border-top: 1px dashed #334155;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .digital-clock-card {
+        padding: 1rem 1.15rem;
+      }
+      .digital-clock-body {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+      .date-text {
+        font-size: 1.05rem;
+      }
+      .digit-box {
+        min-width: 46px;
+      }
+      .digit-num {
+        font-size: 1.75rem;
+      }
+      .digital-digits-display {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    .card-status-pill.status-open {
+      color: #047857;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      background: rgba(236, 253, 245, 0.96);
+    }
+
+    .card-status-pill.status-closing {
+      color: #b45309;
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      background: rgba(254, 243, 199, 0.96);
+    }
+
+    .card-status-pill.status-closed {
+      color: #4b5563;
+      border: 1px solid rgba(156, 163, 175, 0.3);
+      background: rgba(243, 244, 246, 0.96);
+    }
+
+    @media (max-width: 768px) {
+      .disclaimer-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+        padding: 1rem 1.25rem;
+      }
+      .disclaimer-text {
+        font-size: 0.86rem;
+      }
+    }
+
+    /* ==========================================================================
+       SITE FOOTER
+       ========================================================================== */
+    .site-footer {
+      background: #1c1917;
+      color: #d6d3d1;
+      padding: 3.5rem 0 2rem 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    .footer-brand-title {
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-desc {
+      font-size: 0.88rem;
+      line-height: 1.7;
+      color: #a8a29e;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-heading {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 0.88rem;
+    }
+
+    .footer-links a:hover {
+      color: #f97316;
+    }
+
+    .footer-bottom {
+      padding-top: 1.5rem;
+      border-top: 1px solid #292524;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: #78716c;
+    }
+
+    /* Toast Notification */
+    .toast-msg {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #1c1917;
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: var(--radius-full);
+      font-size: 0.88rem;
+      font-weight: 600;
+      box-shadow: var(--shadow-lg);
+      z-index: 2000;
+      opacity: 0;
+      transition: all var(--dur-normal) var(--ease-out);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toast-msg.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="site-nav" id="siteNav">
+    <div class="container nav-inner">
+      <a href="#" class="nav-brand">
+        <img src="logo_transparent.png" alt="大埔商圈LOGO" class="brand-logo-img" onerror="this.src='logo.jpg'">
+        <div class="brand-text">
+          <div class="brand-title">
+            大埔美食商圈
+            <span class="brand-tag">LINE 集點</span>
+          </div>
+          <div class="brand-sub">彰化市大埔商圈發展協會 ‧ 官方活動指南</div>
+        </div>
+      </a>
+
+      <div class="nav-actions">
+        <div class="nav-taipei-clock" title="台北標準時間 (UTC+8 Asia/Taipei) 營業狀態即時同步">
+          <span class="clock-icon">🕒</span>
+          <span class="clock-label">台北時間</span>
+          <span class="clock-time num-font" id="navTaipeiTime">--:--:--</span>
+        </div>
+        <a href="#line-activity-section" class="btn-event-quick">
+          <span>🎁</span>
+          <span>集點活動好康</span>
+        </a>
+        <button class="btn-fav-drawer" id="favFilterBtn" title="查看我珍藏的店家清單">
+          <span>❤️ 口袋名單</span>
+          <span class="fav-counter num-font" id="favCountBadge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Editorial Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge-wrap">
+            <span class="hero-badge-dot"></span>
+            <span class="hero-badge-text">彰化市大埔商圈發展協會 ‧ 盛大舉辦</span>
+          </div>
+          <h1 class="hero-title">
+            大埔美食商圈<br/>
+            <span class="accent-text">LINE 線上集點活動</span>
+          </h1>
+          <p class="hero-lead">
+            <strong>吃美食 ‧ 集點數 ‧ 拿好禮！</strong> 走訪大埔路 <strong>61家精選在地名店，消費滿額即可</strong>出示手機掃描集點，集滿 5 點享雙重好禮！
+          </p>
+
+          <!-- 4 Quick Stats Chips -->
+          <div class="hero-stats">
+            <div class="stat-chip">
+              <span class="val num-font">61</span>
+              <span class="lbl">家特約名店</span>
+            </div>
+            <div class="stat-chip">
+              <span class="val num-font">5.0</span>
+              <span class="lbl">老饕高評分</span>
+            </div>
+            <div class="stat-chip">
+              <span class="val num-font">5 點</span>
+              <span class="lbl">換雙重好禮</span>
+            </div>
+            <div class="stat-chip">
+              <span class="val num-font">100%</span>
+              <span class="lbl">地圖導航</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side Composite Badge: Association Gold Seal & DAPU Mascot -->
+        <div class="hero-emblem-stage">
+          <div class="emblem-composite">
+            <div class="emblem-logo-wrap" title="彰化市大埔商圈發展協會官方會徽">
+              <img src="logo_transparent.png" alt="大埔商圈會徽" onerror="this.src='logo.jpg'">
+            </div>
+            <div class="emblem-mascot-wrap" title="大埔商圈官方吉祥物公仔">
+              <img src="mascot.png" alt="大埔商圈吉祥物">
+            </div>
+          </div>
+          <div class="emblem-caption">Official Line Points Event ‧ Dapu Food District</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PROMINENT LINE ACTIVITY EVENT SECTION
+       ========================================================================== -->
+  <section class="activity-section" id="line-activity-section">
+    <div class="container">
+      <div class="activity-card-container">
+        <div class="activity-grid">
+          <!-- Left: Inpainted Event Poster without store name -->
+          <div class="activity-poster-wrap">
+            <img src="line_activity_poster.png" alt="大埔美食商圈 LINE 線上集點活動海報">
+          </div>
+
+          <!-- Right: Interactive Activity Info & 4 Steps -->
+          <div class="activity-content">
+            <div class="activity-header">
+              <div class="activity-ribbon">🔥 官方熱門活動 ‧ 盛大進行中</div>
+              <h2 class="activity-title">大埔美食商圈 LINE 線上集點活動</h2>
+              <div class="activity-slogan">「 吃美食 ‧ 集點數 ‧ 拿好禮！ 」</div>
+            </div>
+
+            <!-- 4 Steps -->
+            <div class="steps-grid">
+              <div class="step-box">
+                <div class="step-icon">🍴</div>
+                <div class="step-title">1. 吃美食</div>
+                <div class="step-desc">走訪大埔路 61 家特色美食名店</div>
+              </div>
+              <div class="step-box">
+                <div class="step-icon">📱</div>
+                <div class="step-title">2. 集點數</div>
+                <div class="step-desc">消費滿額出示手機掃描 QR Code</div>
+              </div>
+              <div class="step-box">
+                <div class="step-icon">🎁</div>
+                <div class="step-title">3. 拿好禮</div>
+                <div class="step-desc">集滿 5 點即可兌換商圈雙重好禮</div>
+              </div>
+              <div class="step-box">
+                <div class="step-icon">👥</div>
+                <div class="step-title">4. 享樂趣</div>
+                <div class="step-desc">更多商圈即時好康與抽獎活動</div>
+              </div>
+            </div>
+
+            <!-- Bottom Reward Banner -->
+            <div class="activity-reward-bar">
+              <div class="reward-icon">📍</div>
+              <div class="reward-text">
+                大埔路有參與集點活動的店家<br/>
+                消費滿額即可集點，<span>集滿 5 點，享雙重好禮！</span>
+              </div>
+              <div class="reward-actions">
+                <button class="btn-scan-qr" onclick="openActivityModal()">
+                  <span>🔍 查看活動詳情</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prominent Disclaimer Announcement Section -->
+  <section class="disclaimer-section">
+    <div class="container">
+      <div class="disclaimer-card">
+        <div class="disclaimer-badge">📢 活動宣導聲明</div>
+        <div class="disclaimer-text">
+          本活動店家之營業時間及商品資訊係彙整自公開網路資訊，如有內容差異，敬請以店家現場公告及實際提供之商品為準。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search, Filter & Category Control Center -->
+  <section class="control-section" id="storesSection">
+    <div class="container">
+      <div class="control-panel">
+        
+        <!-- Authentic Digital LED Clock Display -->
+        <div class="digital-clock-card">
+          <div class="digital-clock-header">
+            <div class="clock-badge-left">
+              <span class="live-blink-dot"></span>
+              <span class="clock-badge-text">🕒 台北標準時間 ‧ 數位電子鐘 (Asia/Taipei UTC+8)</span>
+            </div>
+            <div class="clock-badge-right">
+              <span class="sync-status-text">🟢 即時同步運算中</span>
+            </div>
+          </div>
+
+          <div class="digital-clock-body">
+            <!-- Digital Date & Weekday -->
+            <div class="digital-date-section">
+              <span class="date-icon">📅</span>
+              <span class="date-text num-font" id="digitalDateVal">2026 年 08 月 29 日</span>
+              <span class="weekday-tag" id="digitalWeekVal">星期六</span>
+            </div>
+
+            <!-- Digital Numbers Display -->
+            <div class="digital-digits-display">
+              <div class="digit-box" title="時 (Hours)">
+                <span class="digit-num num-font" id="clockHH">--</span>
+                <span class="digit-label">時 (HOURS)</span>
+              </div>
+              <span class="digit-colon">:</span>
+              <div class="digit-box" title="分 (Minutes)">
+                <span class="digit-num num-font" id="clockMM">--</span>
+                <span class="digit-label">分 (MINS)</span>
+              </div>
+              <span class="digit-colon">:</span>
+              <div class="digit-box digit-box-sec" title="秒 (Seconds)">
+                <span class="digit-num num-font" id="clockSS">--</span>
+                <span class="digit-label">秒 (SECS)</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="digital-clock-footer">
+            <span>⚡ 全商圈 61 家特約名店 ‧ 依台北時間即時核對營業與公休狀態</span>
+          </div>
+        </div>
+
+        <!-- Search and Sort Row -->
+        <div class="search-row">
+          <div class="search-input-wrap">
+            <span class="search-icon-left">🔍</span>
+            <input type="text" id="searchInput" class="search-input" placeholder="今天想吃什麼？搜尋店名、必點招牌（如：蛋餅、生魚片、奶茶）、門牌號...">
+            <button id="searchClearBtn" class="search-clear-btn" title="清除搜尋">✕</button>
+          </div>
+
+          <div class="sort-select-wrap">
+            <select id="sortSelect" class="sort-select">
+              <option value="door-asc">📍 依大埔路門牌 (由小到大)</option>
+              <option value="rating-desc">⭐ 老饕評分 (由高到低)</option>
+              <option value="reviews-desc">🔥 評論人氣 (由多到少)</option>
+              <option value="door-desc">📍 依大埔路門牌 (由大到小)</option>
+            </select>
+            <span class="sort-arrow">▼</span>
+          </div>
+        </div>
+
+        <!-- Horizontally Scrollable Category Pills -->
+        <div class="category-pills" id="categoryPills">
+          <button class="cat-pill active" data-cat="all">
+            <span>✨ 全部精選</span>
+            <span class="cat-count-badge num-font">61</span>
+          </button>
+          <button class="cat-pill" data-cat="breakfast">
+            <span>🍳 傳統早午餐</span>
+            <span class="cat-count-badge num-font">4</span>
+          </button>
+          <button class="cat-pill" data-cat="snack">
+            <span>🍢 經典小吃炸物</span>
+            <span class="cat-count-badge num-font">22</span>
+          </button>
+          <button class="cat-pill" data-cat="drink">
+            <span>🧋 人氣手搖冰品</span>
+            <span class="cat-count-badge num-font">7</span>
+          </button>
+          <button class="cat-pill" data-cat="meal">
+            <span>🍱 便當正餐鍋物</span>
+            <span class="cat-count-badge num-font">22</span>
+          </button>
+          <button class="cat-pill" data-cat="shopping">
+            <span>👓 生活百貨美學</span>
+            <span class="cat-count-badge num-font">6</span>
+          </button>
+        </div>
+
+        <!-- Quick Toggle Filter Options -->
+        <div class="quick-toggles">
+          <div class="toggle-chip" id="toggleOpen">
+            <span>🟢 僅看營業中</span>
+          </div>
+          <div class="toggle-chip" id="toggleHighRating">
+            <span>⭐ 4.5 分以上老饕推薦</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Result Status Bar -->
+      <div class="result-status-bar">
+        <div class="result-count">
+          共找到 <span class="num-font" id="resultCountNumber">61</span> 家大埔特約美食店家
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Store Cards Grid Container -->
+  <main class="container">
+    <div class="stores-grid" id="storesGrid">
+      <!-- Dynamically Rendered by JavaScript -->
+    </div>
+  </main>
+
+  <!-- Street Map & Dapu Road Axis Section -->
+  <section class="map-section">
+    <div class="container">
+      <div class="map-header">
+        <h2 class="map-section-title">大埔路美食動線軸心</h2>
+        <p class="map-section-sub">從 353 號彰基生活圈一路品嚐至 727 號延平公園綠意生活段</p>
+      </div>
+
+      <div class="street-axis-container">
+        <div class="street-axis-line">
+          <div class="axis-node">📍 353號 (彰基商圈段)</div>
+          <div class="axis-node">📍 500號 (核心美食十字路口)</div>
+          <div class="axis-node">📍 727號 (延平公園段)</div>
+        </div>
+
+        <div class="axis-stores-pills" id="axisPillsContainer">
+          <!-- Quick Pins injected by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Store Detail Modal -->
+  <div class="modal-backdrop" id="storeModal" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="關閉介紹">✕</button>
+      <img src="" alt="店家封面照片" class="modal-hero-photo" id="modalImg">
+      
+      <div class="modal-body">
+        <div class="modal-title-row">
+          <h3 class="modal-title" id="modalTitle">店家名稱</h3>
+          <span class="modal-door-tag num-font" id="modalDoor">No.01</span>
+        </div>
+        <div class="modal-tag" id="modalTag">特色標籤</div>
+
+        <!-- 4-Grid Specs -->
+        <div class="modal-specs-grid">
+          <div class="spec-item">
+            <span class="spec-icon">📍</span>
+            <div class="spec-content">
+              <span class="spec-lbl">門市地址</span>
+              <span class="spec-val" id="modalAddress">大埔路000號</span>
+            </div>
+          </div>
+          <div class="spec-item">
+            <span class="spec-icon">⭐</span>
+            <div class="spec-content">
+              <span class="spec-lbl">Google 評分</span>
+              <span class="spec-val" id="modalRating">5.0 (100+ 評論)</span>
+            </div>
+          </div>
+          <div class="spec-item">
+            <span class="spec-icon">⏰</span>
+            <div class="spec-content">
+              <span class="spec-lbl">營業狀態</span>
+              <span class="spec-val" id="modalHours">營業中 ‧ 10:00-21:00</span>
+            </div>
+          </div>
+          <div class="spec-item">
+            <span class="spec-icon">💰</span>
+            <div class="spec-content">
+              <span class="spec-lbl">平均消費</span>
+              <span class="spec-val" id="modalPrice">$40 - $150</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-section-title">📖 店家特色簡介</div>
+        <p class="modal-description" id="modalDesc">詳細介紹內容...</p>
+
+        <div class="modal-section-title">✨ 老饕招牌必點推薦</div>
+        <div class="modal-dishes-grid" id="modalDishes">
+          <!-- Dishes Pills -->
+        </div>
+
+        <!-- Store Modal Disclaimer Notice -->
+        <div class="modal-disclaimer">
+          📢 <strong>宣導提醒：</strong>本活動店家之營業時間及商品資訊係彙整自公開網路資訊，如有內容差異，敬請以店家現場公告及實際提供之商品為準。
+        </div>
+
+        <!-- Modal Action Buttons -->
+        <div class="modal-actions">
+          <a href="#" target="_blank" rel="noopener" class="btn-nav-map" id="modalMapBtn">
+            <span>🗺️</span>
+            <span>Google 地圖一鍵導航</span>
+          </a>
+          <button class="btn-copy-addr" id="modalCopyBtn" title="複製地址">
+            <span>📋</span>
+            <span>複製地址</span>
+          </button>
+          <button class="btn-modal-fav" id="modalFavBtn" title="加入口袋名單">
+            <span>❤️</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Activity Detail Modal -->
+  <div class="modal-backdrop" id="activityModal" role="dialog" aria-modal="true">
+    <div class="modal-card" style="max-width: 520px; text-align: center;">
+      <button class="modal-close-btn" onclick="closeActivityModal()" aria-label="關閉">✕</button>
+      <div style="padding: 2rem;">
+        <div style="font-size: 2.5rem; margin-bottom: 8px;">🎁</div>
+        <h3 style="font-size: 1.4rem; font-weight: 900; margin-bottom: 6px; color: var(--text-main);">LINE 線上集點活動規範</h3>
+        <p style="font-size: 0.9rem; color: var(--primary-700); font-weight: 800; margin-bottom: 1.25rem;">吃美食 ‧ 集點數 ‧ 拿好禮！</p>
+        
+        <div style="background: #fff7ed; border: 1px solid #fed7aa; border-radius: var(--radius-md); padding: 1.25rem; text-align: left; font-size: 0.88rem; line-height: 1.7; color: var(--text-body); margin-bottom: 1.5rem;">
+          <p><strong>📍 活動對象：</strong> 全體大埔商圈消費者與造訪遊客。</p>
+          <p><strong>🏷️ 集點方式：</strong> 至大埔路有參與集點活動之特約店家，單筆消費滿額即可掃描 QR Code 獲得 1 點。</p>
+          <p><strong>🎉 獎勵兌換：</strong> 集滿 <strong>5 點</strong> 即可至商圈指定兌換處領取專屬雙重精美禮品！</p>
+        </div>
+
+        <div style="display: flex; justify-content: center; margin-bottom: 1rem;">
+          <img src="mascot.png" alt="大埔商圈吉祥物" style="width: 140px; height: 140px; object-fit: contain; filter: drop-shadow(0 6px 12px rgba(0,0,0,0.15));">
+        </div>
+        <p style="font-size: 0.88rem; color: var(--text-body); font-weight: 700; margin-bottom: 1.25rem;">✨ 走訪大埔路 61 家特約名店 ‧ 單筆消費滿額出示手機即可掃碼集點！</p>
+
+        <button onclick="closeActivityModal()" style="background: var(--line-green); color: #ffffff; border: none; padding: 10px 28px; border-radius: var(--radius-full); font-weight: 800; cursor: pointer; font-size: 0.95rem;">
+          太棒了，立即開始集點！
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">大埔美食商圈 ‧ LINE 線上集點活動</div>
+          <p class="footer-desc">
+            由彰化市大埔商圈發展協會官方主辦，集結大埔路 61 家優質商圈店家。推動在地特色美食觀光與數位線上集點體驗，邀請全國民眾一同漫步大埔、品味舌尖上的彰化。
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-heading">快速導覽</div>
+          <ul class="footer-links">
+            <li><a href="#line-activity-section">🎁 LINE 線上集點專區</a></li>
+            <li><a href="#storesSection">🍽️ 61 家精選名店目錄</a></li>
+            <li><a href="大埔商圈60家美食精選宣傳影片.mp4" target="_blank">🎬 1080p 高畫質宣傳影片</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">主辦單位資訊</div>
+          <p class="footer-desc">
+            <strong>彰化市大埔商圈發展協會</strong><br/>
+            會址：彰化市延平路480號<br/>
+            電話：04-7111046<br/>
+            服務區域：彰化市大埔路及周邊街區<br/>
+            活動主軸：吃美食 ‧ 集點數 ‧ 拿好禮！
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 彰化市大埔商圈發展協會 ‧ 版權所有</div>
+        <div>大埔美食商圈 LINE 線上集點活動官方專頁</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Message Element -->
+  <div class="toast-msg" id="toastMsg">
+    <span>✅</span>
+    <span id="toastText">已成功複製地址至剪貼簿！</span>
+  </div>
+
+  <!-- Application Logic -->
+  <script>
+    // 1. Stores Data Model
+    const STORES_DATA = [{"id": "store-1", "name": "大埔無名早點", "category": "breakfast", "categoryLabel": "古早味早點", "categoryIcon": "Utensils", "tag": "清晨排隊傳統手作蛋餅水煎包燒餅", "rating": 4.8, "reviewCount": 380, "priceRange": "$", "priceText": "$15-$70", "address": "彰化縣彰化市大埔路353號", "phone": "04-7112353", "hours": "營業時間：05:30-10:30 (售完為止，不定期公休)", "openStatus": "營業中", "image": "assets/stores/dapu_zaodian.jpg", "localImage": "store_images/dapu_zaodian.jpg", "description": "大埔路數十年在地老饕激推的無名傳統排隊早點！每天清晨五點半現做現煎，招牌手作古早味厚蔥蛋餅、酥脆高麗菜水煎包、現烤香酥燒餅油條與非基改現磨熱豆漿，銅板價份量超滿足！", "signatureDishes": ["招牌手作古早味厚蔥蛋餅", "現煎爆汁高麗菜水煎包", "現烤酥脆燒餅夾油條", "古早味現磨熱豆漿"], "mapX": 16, "mapY": 8}, {"id": "store-2", "name": "王記食堂", "category": "meal", "categoryLabel": "家庭料理熟食", "categoryIcon": "Utensils", "tag": "4.9星暖心家常飯菜", "rating": 4.9, "reviewCount": 330, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路378號", "phone": "04-7113150", "hours": "營業時間：10:30-13:30 / 16:30-20:00 (不定期公休)", "openStatus": "營業中", "image": "assets/stores/p8_img5.png", "localImage": "store_images/p8_img5.png", "description": "榮獲4.9星高分的在地暖心小館！每日供應現做道地台菜便當與家常料理，菜色新鮮乾淨、調味適中不油膩，宛如在家吃飯般親切舒適。", "signatureDishes": ["古早味酥炸排骨便當", "香煎無刺虱目魚肚飯", "家常肉絲大火炒麵", "現炒時令鮮蔬"], "mapX": 37, "mapY": 14}, {"id": "store-3", "name": "得魚食堂", "category": "meal", "categoryLabel": "日式定食", "categoryIcon": "Utensils", "tag": "滿分5.0職人鮮魚定食", "rating": 5.0, "reviewCount": 280, "priceRange": "$$", "priceText": "$200-$400", "address": "彰化縣彰化市大埔路380號", "phone": "04-7112628", "hours": "營業時間：11:30-14:00 / 17:30-21:00 (週二公休)", "openStatus": "營業中", "image": "assets/stores/p9_img1.png", "localImage": "store_images/p9_img1.png", "description": "大埔商圈滿星5.0推薦的職人級日本料理與鮮魚定食！每日清晨採購新鮮海魚，鹽烤或醬燒保留魚肉鮮嫩甘甜，搭配精緻日式小菜與手作茶碗蒸。", "signatureDishes": ["職人六宮格小菜定食", "鹽烤當日現撈時魚定食", "特製醬燒鮭魚定食", "預約限定北極熊奶茶"], "mapX": 38, "mapY": 14}, {"id": "store-4", "name": "牛釜山牛排", "category": "meal", "categoryLabel": "鐵板牛排", "categoryIcon": "Flame", "tag": "厚切原塊炙燒牛排", "rating": 4.6, "reviewCount": 450, "priceRange": "$$", "priceText": "$200-$400", "address": "彰化縣彰化市大埔路393號", "phone": "04-7110165", "hours": "營業時間：11:00-14:00 / 16:30-21:00", "openStatus": "營業中", "image": "assets/stores/p8_img4.png", "localImage": "store_images/p8_img4.png", "description": "嚴選原塊厚切牛肉，高溫鐵板炙燒鎖住肉汁，滋滋作響香氣四溢！附鐵板麵、太陽蛋與濃湯飲料無限享用，是大埔商圈聚餐饗肉首選。", "signatureDishes": ["特選厚切沙朗牛排", "香煎脆皮雞腿排", "雙拼排餐 (免費加麵)", "自助吧濃湯爆米花無限享用"], "mapX": 39, "mapY": 15}, {"id": "store-5", "name": "雞雞叫鹽水雞", "category": "snack", "categoryLabel": "爽口鹽水雞", "categoryIcon": "Utensils", "tag": "鮮脆爽口獨門胡椒中藥香", "rating": 4.5, "reviewCount": 370, "priceRange": "$$", "priceText": "$200-$400", "address": "彰化縣彰化市大埔路413號", "phone": "0902-251692", "hours": "營業時間：17:00-02:00 (售完為止，不定期公休)", "openStatus": "營業中", "image": "assets/stores/p9_img4.png", "localImage": "store_images/p9_img4.png", "description": "去骨雞肉鮮嫩Q脆，搭配十多種新鮮時蔬、脆筍、小黃瓜與百頁豆腐，加入新鮮檸檬汁、洋蔥丁與特調中藥胡椒鹽，清爽解膩，宵夜下酒絕配！", "signatureDishes": ["招牌去骨鮮脆半雞", "多樣五彩時蔬任選套餐", "酸爽檸檬特調鹽水雞", "煙燻雞肉切盤"], "mapX": 41, "mapY": 18}, {"id": "store-6", "name": "我家炸雞", "category": "snack", "categoryLabel": "酥脆炸雞", "categoryIcon": "Flame", "tag": "薄皮多汁台式炸雞", "rating": 4.4, "reviewCount": 330, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路440號", "phone": "04-7128811", "hours": "營業時間：15:30-21:30 (週日公休)", "openStatus": "已打烊", "image": "assets/stores/wojia_fried_chicken.jpg", "localImage": "store_images/wojia_fried_chicken.jpg", "description": "台式薄皮炸雞的經典之作！雞肉鮮嫩多汁，外皮炸得喀滋酥脆不油膩，招牌炸雞翅、雞腿與地瓜薯條灑上甘梅粉，午後下課下班點心首選。", "signatureDishes": ["香酥多汁薄皮炸雞翅", "特大金黃脆皮炸雞腿", "甘梅地瓜脆薯條", "現炸花枝丸"], "mapX": 44, "mapY": 21}, {"id": "store-7", "name": "點頭大餅", "category": "snack", "categoryLabel": "銅板點心", "categoryIcon": "Utensils", "tag": "大埔下午茶排隊第一名", "rating": 4.4, "reviewCount": 480, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路441號", "phone": "0923-717285", "hours": "營業時間：13:30-18:00 (售完為止，週日公休)", "openStatus": "已打烊", "image": "assets/stores/p7_img2.png", "localImage": "store_images/p7_img2.png", "description": "大埔路超級爆款下午茶首選！外皮煎至金黃酥脆、內餡軟糯熱氣騰騰，鹹香爆汁蔥花與香濃花生甜口味，出爐幾分鐘內秒殺搶購。", "signatureDishes": ["招牌鹹甜古早味大餅", "爆漿翠綠蔥花大餅", "紅豆麻糬大餅", "濃郁花生大餅"], "mapX": 44, "mapY": 22}, {"id": "store-8", "name": "吳家紅茶冰彰化大埔店", "category": "drink", "categoryLabel": "古早味紅茶", "categoryIcon": "Coffee", "tag": "超大杯消暑紅茶冰", "rating": 3.2, "reviewCount": 210, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路442號", "phone": "0958-107591", "hours": "營業時間：10:00-22:00", "openStatus": "營業中", "image": "assets/stores/p7_img4.png", "localImage": "store_images/p7_img4.png", "description": "超大胖胖杯古早味紅茶冰！決明子慢火熬製濃香古早味紅茶，加上滿滿碎冰，清涼解渴又便宜大杯，盛夏逛大埔商圈的最佳解渴良伴。", "signatureDishes": ["招牌古早味紅茶冰 (胖胖杯)", "檸檬冬瓜碎冰茶", "濃醇豆漿紅茶", "金桔檸檬冰"], "mapX": 44, "mapY": 21}, {"id": "store-9", "name": "阿根早點-大埔店", "category": "breakfast", "categoryLabel": "傳統早午餐", "categoryIcon": "Utensils", "tag": "超人氣現煎酥皮蛋餅", "rating": 4.5, "reviewCount": 380, "priceRange": "$", "priceText": "$20-$90", "address": "彰化縣彰化市大埔路443號", "phone": "04-7115099", "hours": "營業時間：06:00-13:10 (週二公休)", "openStatus": "營業中", "image": "assets/stores/agen_zaodian.jpg", "localImage": "store_images/agen_zaodian.jpg", "description": "彰化大埔路超人氣知名連鎖早點名店！以招牌特製「酥皮蛋餅」聞名全台，外皮煎至金黃酥脆、內層蛋香滿溢。提供多樣化口味蛋餅、厚片吐司、鐵板麵與香濃胚芽豆漿，是在地人最愛的早餐元氣首選。", "signatureDishes": ["招牌特製脆皮蛋餅", "椒麻雞蛋餅", "肉鬆玉米蛋餅", "香濃胚芽豆漿"], "mapX": 45, "mapY": 20}, {"id": "store-10", "name": "神鬼炸雞店", "category": "snack", "categoryLabel": "香酥炸物", "categoryIcon": "Flame", "tag": "滿分5.0酥香脆皮炸雞", "rating": 5.0, "reviewCount": 190, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路466號", "phone": "0986-112233", "hours": "營業時間：13:30-22:00 (依現場公告為準)", "openStatus": "已打烊", "image": "assets/stores/p9_img2.png", "localImage": "store_images/p9_img2.png", "description": "5.0星爆評口碑炸物！獨家特製脆漿裹粉，高溫瞬炸鎖住雞肉鮮嫩湯汁，外皮金黃酥脆如餅乾，肉質多汁爆香，是下午茶解饞必點神作。", "signatureDishes": ["神鬼爆汁黃金雞腿", "香酥脆皮大雞排", "招牌椒鹽米血", "現炸脆甜四季豆"], "mapX": 46, "mapY": 23}, {"id": "store-11", "name": "鮮食煮義", "category": "meal", "categoryLabel": "健康熟食", "categoryIcon": "Utensils", "tag": "少油低卡健康餐盒", "rating": 4.6, "reviewCount": 250, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路468號", "phone": "0910-810159", "hours": "營業時間：11:00-14:00 / 16:30-20:30 (週六、日公休)", "openStatus": "營業中", "image": "assets/stores/p8_img1.png", "localImage": "store_images/p8_img1.png", "description": "主打健康少油、少鹽的舒肥低卡餐盒與新鮮熟食，嚴選優質蛋白質肉品搭配五色時蔬與紫米飯，清爽無負擔，是彰基醫護與健身族群的心頭好。", "signatureDishes": ["義式舒肥嫩雞胸健康餐", "炙燒鮭魚排五穀餐盒", "香滷牛腱低卡餐", "五色時令時蔬餐"], "mapX": 46, "mapY": 23}, {"id": "store-12", "name": "印第安便利茶飲（大埔店）", "category": "drink", "categoryLabel": "懷舊茶飲", "categoryIcon": "Coffee", "tag": "大埔經典茶飲專賣", "rating": 4.3, "reviewCount": 280, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路471號", "phone": "04-7121999", "hours": "營業時間：10:00-21:30", "openStatus": "營業中", "image": "assets/stores/p7_img1.png", "localImage": "store_images/p7_img1.png", "description": "彰化在地人的青春回憶！搖出綿密細緻泡沫的傳統泡沫紅茶、綠茶與胚芽奶茶，保留早期茶坊最純粹的茶香與甘甜，價格親民懷舊感滿分。", "signatureDishes": ["經典古早味泡沫紅茶", "懷舊胚芽奶茶", "招牌鮮萃百香綠茶", "青梅綠茶"], "mapX": 47, "mapY": 24}, {"id": "store-13", "name": "大埔臭豆腐", "category": "snack", "categoryLabel": "經典小吃", "categoryIcon": "Flame", "tag": "大埔商圈宵夜排隊王", "rating": 4.4, "reviewCount": 610, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路477號", "phone": "04-7129259", "hours": "營業時間：16:00-22:30 (週日公休)", "openStatus": "已打烊", "image": "assets/stores/p6_img5.png", "localImage": "store_images/p6_img5.png", "description": "外酥內嫩的頂級金黃炸臭豆腐，一口咬下爆出鮮甜蒜香肉汁！搭配店家獨門爽脆手作台式泡菜與特製辣椒醬，是大埔商圈夜晚最火熱的排隊地標。", "signatureDishes": ["脆皮金黃香炸臭豆腐", "招牌手作台式脆泡菜", "麻辣鴨血臭豆腐煲", "古早味肉燥乾麵"], "mapX": 47, "mapY": 25}, {"id": "store-14", "name": "狐狸糊塗愛上魚雞蛋糕", "category": "snack", "categoryLabel": "創意甜點", "categoryIcon": "Sparkles", "tag": "超萌造型爆漿雞蛋糕", "rating": 4.9, "reviewCount": 310, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路485巷7號", "phone": "0925-493718", "hours": "營業時間：15:00-19:00 (售完即止，不定期公休)", "openStatus": "已打烊", "image": "assets/stores/p6_img4.png", "localImage": "store_images/p6_img4.png", "description": "4.9高分網美必訪甜品！採用純牛奶不加一滴水調製麵糊，現烤超可愛狐狸與魚造型，內餡爆漿卡士達、起司拉絲與黑糖麻糬，外脆內軟大人小孩都愛。", "signatureDishes": ["純牛奶爆漿香草卡士達", "牽絲莫札瑞拉起司雞蛋糕", "黑糖麻糬QQ夾心", "超萌造型手作雞蛋糕"], "mapX": 48, "mapY": 26}, {"id": "store-15", "name": "郎港式鮮肉包", "category": "snack", "categoryLabel": "港式包點", "categoryIcon": "Utensils", "tag": "手工現包爆汁肉包", "rating": 4.6, "reviewCount": 260, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路485巷33號", "phone": "04-7117782", "hours": "營業時間：13:00-22:00 (不定期公休)", "openStatus": "已打烊", "image": "assets/stores/p6_img2.png", "localImage": "store_images/p6_img2.png", "description": "隱身巷弄中的排隊港式點心攤！老麵發酵外皮Q軟帶有麵香，飽滿的豬肉蔥花內餡鮮甜流湯，銅板價就能品嚐剛出爐熱氣騰騰的幸福滋味。", "signatureDishes": ["現包現煎爆汁港式鮮肉包", "底部酥脆手工生煎包", "香濃研磨豆漿"], "mapX": 48, "mapY": 28}, {"id": "store-16", "name": "皇品牛肉麵大埔店", "category": "meal", "categoryLabel": "牛肉麵館", "categoryIcon": "Utensils", "tag": "川味紅燒厚切牛腱", "rating": 4.5, "reviewCount": 410, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路485巷35號", "phone": "04-7128878", "hours": "營業時間：11:00-20:30", "openStatus": "營業中", "image": "assets/stores/p6_img3.png", "localImage": "store_images/p6_img3.png", "description": "大埔巷弄間的極品牛肉麵！牛大骨與數十種中藥材慢火精燉川味紅燒湯頭，厚切牛腱肉軟嫩帶筋入口即化，手工拉麵勁道十足，酸菜與辣椒任加過癮。", "signatureDishes": ["半筋半肉紅燒牛肉麵", "清燉鮮牛肉細粉", "特製滷牛肚拼盤", "紅燒牛雜麵"], "mapX": 48, "mapY": 27}, {"id": "store-17", "name": "佬台南古早味鍋燒意麵-大埔店", "category": "meal", "categoryLabel": "古早味麵食", "categoryIcon": "Utensils", "tag": "道地府城古早甘甜", "rating": 4.1, "reviewCount": 84, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路497號", "phone": "0902-188699", "hours": "營業時間：10:30-19:30 (週六公休)", "openStatus": "營業中", "image": "assets/stores/p6_img1.png", "localImage": "store_images/p6_img1.png", "description": "傳承台南正統柴魚大骨蔬菜甘甜湯頭，使用傳統油炸意麵、鮮甜半熟蛋、鮮蝦與炸魚肉，保留濃郁府城風味，每一口都是古早好滋味。", "signatureDishes": ["府城傳統古早味鍋燒意麵", "泡菜海鮮鍋燒冬粉", "酥炸台式黑輪片", "鮮蝦鍋燒意麵"], "mapX": 50, "mapY": 29}, {"id": "store-18", "name": "十三妹螺螄粉（大埔店）", "category": "meal", "categoryLabel": "特色主食麵食", "categoryIcon": "Utensils", "tag": "酸辣鮮香正宗柳州螺螄粉", "rating": 4.6, "reviewCount": 320, "priceRange": "$$", "priceText": "$130-$220", "address": "彰化縣彰化市大埔路499號", "phone": "0911-108950", "hours": "營業時間：16:00-21:00 (假日15:45開始，售完為止)", "openStatus": "營業中", "image": "assets/stores/shisanmei_luosifen.jpg", "localImage": "store_images/shisanmei_luosifen.jpg", "description": "彰化大埔路超人氣柳州道地風味「十三妹螺螄粉」！特製醇厚濃郁螺螄湯底，搭配彈牙滑溜米粉與招牌靈魂「吸汁炸蛋」、特製厚切叉燒、酸豆角與酥炸豆皮。酸辣鮮爽、香氣撲鼻，是重口味愛好者不可錯過的大埔特色美食！", "signatureDishes": ["招牌叉燒螺螄粉", "人氣必點吸汁大炸蛋", "經典蔬菜螺螄粉", "酥脆炸豆皮"], "mapX": 50, "mapY": 28}, {"id": "store-19", "name": "無飲 彰化大埔店", "category": "drink", "categoryLabel": "人氣手搖", "categoryIcon": "Coffee", "tag": "無糖純茶極致風味", "rating": 4.8, "reviewCount": 520, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路499號", "phone": "04-7289891", "hours": "營業時間：10:00-21:00 (週日、週一公休)", "openStatus": "營業中", "image": "assets/stores/p5_img4.png", "localImage": "store_images/p5_img4.png", "description": "藝人無尊創立的熱門手搖飲！主打即使點無糖也回甘不澀的頂級冷泡茶與鮮奶茶，招牌至尊黑糖珍珠奶茶與金萱茶香氣撲鼻，深受年輕族群喜愛。", "signatureDishes": ["頂級無糖金萱茶", "至尊黑糖珍珠鮮奶", "惡魔焙茶厚奶蓋", "鮮榨檸檬冬瓜茶"], "mapX": 50, "mapY": 30}, {"id": "store-20", "name": "風味食堂｜大埔店", "category": "meal", "categoryLabel": "台灣風味簡餐", "categoryIcon": "Utensils", "tag": "豐富平價家常風味", "rating": 4.0, "reviewCount": 270, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路523號", "phone": "0983-606697", "hours": "營業時間：10:30-13:30 / 16:00-21:00 (週六公休)", "openStatus": "營業中", "image": "assets/stores/p5_img3.png", "localImage": "store_images/p5_img3.png", "description": "提供豐富台式熱炒、炒飯麵與便當簡餐，用料紮實，口味親民，熱騰騰的現炒料理與熱湯深獲在地家庭與上班族的好評。", "signatureDishes": ["招牌沙茶牛肉燴飯", "櫻花蝦大火粒粒炒飯", "老罈酸菜魚", "金沙豆腐", "京都排骨"], "mapX": 52, "mapY": 32}, {"id": "store-21", "name": "有種鹽水雞", "category": "snack", "categoryLabel": "爽口鹽水雞", "categoryIcon": "Utensils", "tag": "香麻鮮脆特調鹽水雞", "rating": 4.8, "reviewCount": 280, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路527號", "phone": "0954-098576", "hours": "營業時間：17:00-23:00 (售完為止，不定期公休)", "openStatus": "營業中", "image": "assets/stores/youzhong_yanshuiji.jpg", "localImage": "store_images/youzhong_yanshuiji.jpg", "description": "大埔路超人氣宵夜排隊名攤！主打新鮮現剪脆皮鹽水雞與獨門特調麻辣雞，肉質Q彈鮮嫩多汁，搭配爽脆時蔬、甜不辣、小黃瓜與招牌香蔥中藥胡椒，麻香爽口超涮嘴！", "signatureDishes": ["招牌有種鹽水雞", "秘製香麻麻辣雞", "爽脆時蔬任選拼盤", "特調中藥蔥蒜去骨雞肉"], "mapX": 52, "mapY": 32}, {"id": "store-22", "name": "鑫鮮味臭臭鍋", "category": "meal", "categoryLabel": "個人小火鍋", "categoryIcon": "Flame", "tag": "平價美味個人小火鍋", "rating": 4.4, "reviewCount": 390, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路531號", "phone": "04-7119610", "hours": "營業時間：11:00-14:00 / 17:00-22:00 (週三公休)", "openStatus": "營業中", "image": "assets/stores/p8_img3.png", "localImage": "store_images/p8_img3.png", "description": "平價澎湃的個人小火鍋名店！招牌大腸臭臭鍋、海鮮豆腐鍋與香濃起司牛奶鍋，湯頭濃郁食材新鮮，內用享飲料白飯冰淇淋無限暢飲。", "signatureDishes": ["招牌大腸臭臭鍋", "濃郁起司牛奶海鮮鍋", "川味麻辣牛肉鍋", "韓式泡菜豬肉鍋"], "mapX": 53, "mapY": 33}, {"id": "store-23", "name": "大埔幸福愛潤餅", "category": "snack", "categoryLabel": "特色潤餅", "categoryIcon": "Utensils", "tag": "手工薄皮超厚餡料", "rating": 4.6, "reviewCount": 310, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路533號", "phone": "0911-290609", "hours": "營業時間：10:30-18:00 (週二公休)", "openStatus": "營業中", "image": "assets/stores/p9_img3.png", "localImage": "store_images/p9_img3.png", "description": "手作現擦Q彈潤餅皮，捲入現炒高麗菜、豆芽菜、香酥蛋酥、紅燒肉與花生糖粉，份量巨大飽滿，蔬菜清脆鮮甜，清爽健康又有飽足感！", "signatureDishes": ["招牌古早味手作潤餅", "低糖無負擔養生潤餅", "芥末香辣風味潤餅", "松露椒鹽潤餅"], "mapX": 53, "mapY": 33}, {"id": "store-24", "name": "精工堂鐘錶眼鏡行", "category": "shopping", "categoryLabel": "生活名店", "categoryIcon": "ShoppingBag", "tag": "專業驗光精準配鏡", "rating": 4.4, "reviewCount": 110, "priceRange": "$$", "priceText": "依鏡框鏡片定價", "address": "彰化縣彰化市大埔路535號", "phone": "04-7115382", "hours": "營業時間：09:30-20:30", "openStatus": "營業中", "image": "assets/stores/p5_img2.png", "localImage": "store_images/p5_img2.png", "description": "大埔商圈老字號眼鏡行，具備合格專業驗光師，引進最新數位驗光儀器，提供國內外時尚鏡框、抗藍光鏡片與漸進多焦專業配鏡服務，服務細心周到。", "signatureDishes": ["專業精準數位驗光", "時尚品牌輕量鏡框", "客製抗藍光多焦鏡片", "社區長輩視力照護"], "mapX": 53, "mapY": 33}, {"id": "store-25", "name": "阿忠古早味刈包〔彰化市大埔〕", "category": "snack", "categoryLabel": "傳統小吃", "categoryIcon": "Utensils", "tag": "爌肉肥肉入口即化 ‧ 買刈包送無糖紅茶", "rating": 4.8, "reviewCount": 420, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路552號", "phone": "0935-778899", "hours": "營業時間：11:00-19:30 (週日公休)", "openStatus": "營業中", "image": "assets/stores/p8_img2.png", "localImage": "store_images/p8_img2.png", "description": "曠肉肥肉的部分入口即化完全不會噁心，好吃～老闆很親切，買刈包送無糖紅茶！", "signatureDishes": ["招牌古早味爌肉刈包", "買刈包送無糖紅茶", "瘦肉刈包加荷包蛋", "古早味四神豬腸綜合湯"], "mapX": 55, "mapY": 35}, {"id": "store-26", "name": "豆油伯（阿炮）雞腿排骨便當", "category": "meal", "categoryLabel": "台味經典便當", "categoryIcon": "Utensils", "tag": "大份量酥炸大雞腿", "rating": 3.9, "reviewCount": 360, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路553號", "phone": "04-7114060", "hours": "營業時間：10:00-19:30 (週日公休)", "openStatus": "營業中", "image": "assets/stores/p5_img1.png", "localImage": "store_images/p5_img1.png", "description": "大埔路經典排隊便當老店！大隻酥脆多汁炸雞腿、厚切古早味炸排骨與豐富多樣配菜，飯量十足，是彰基醫護人員與在地家庭最愛的午晚餐選擇。", "signatureDishes": ["超大酥炸雞腿便當", "古早味香煎排骨飯", "招牌香滷控肉飯"], "mapX": 55, "mapY": 35}, {"id": "store-27", "name": "心滷味（心冰糖醬滷味 大埔店）", "category": "snack", "categoryLabel": "冰糖醬滷/小吃", "categoryIcon": "Utensils", "tag": "古法甘醇冰糖冷熱醬滷味", "rating": 4.8, "reviewCount": 270, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路558號", "phone": "0988-558899", "hours": "營業時間：15:30-22:30 (售完為止)", "openStatus": "營業中", "image": "assets/stores/xin_luwei.jpg", "localImage": "store_images/xin_luwei.jpg", "description": "大埔路超人氣宵夜排隊冰糖醬滷味！遵循古法特選純冰糖與數十種漢方中藥慢火精燉，醬香濃郁甘醇入味。招牌冰糖鴨翅、香滷大腸、爆汁豆干、鴨心與季節時蔬，冷熱吃皆美味！", "signatureDishes": ["招牌秘製冰糖鴨翅", "特製古早味鵝米血", "現炒焦糖手撕雞", "滷香骰子豆干"], "mapX": 55, "mapY": 35}, {"id": "store-28", "name": "一番揪 南丸生魚片", "category": "meal", "categoryLabel": "鮮切生魚片/日料", "categoryIcon": "Utensils", "tag": "現點現切產地直送鮮甜生魚片", "rating": 4.8, "reviewCount": 290, "priceRange": "$$", "priceText": "$150-$400", "address": "彰化縣彰化市大埔路563號", "phone": "0988-123456", "hours": "營業時間：15:00-18:00 (週三、週日公休)", "openStatus": "營業中", "image": "assets/stores/nanwan_sashimi.jpg", "localImage": "store_images/nanwan_sashimi.jpg", "description": "大埔路深夜超人氣排隊鮮切生魚片名攤！每日漁港直送新鮮漁獲，現點現切厚度十足。招牌特選極品綜合生魚片、厚切鮭魚、鮮嫩鮪魚、海膽與日式握壽司，鮮甜海味入口即化，宵夜小酌首選！", "signatureDishes": ["特選極品綜合生魚片", "厚切肥美炙燒鮭魚", "產地直送鮮甜鮪魚", "附贈鮮甜鮭魚味噌湯"], "mapX": 56, "mapY": 36}, {"id": "store-29", "name": "滿大碗滷味宵夜專門店-彰化大埔門市", "category": "meal", "categoryLabel": "滷味宵夜", "categoryIcon": "Flame", "tag": "炒/炸/辣/燙四吃滷味", "rating": 4.4, "reviewCount": 460, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路567號", "phone": "04-7115252", "hours": "營業時間：17:00-23:00 (週二公休)", "openStatus": "已打烊", "image": "assets/stores/p4_img1.png", "localImage": "store_images/p4_img1.png", "description": "全台知名滷味連鎖，首創養生湯、麻辣燙、香炒與酥炸四種特色吃法！食材超過百種，特調中藥滷汁入味香醇，宵夜時段聚餐與外帶第一首選。", "signatureDishes": ["招牌麻辣燙滷味", "三杯香炒乾滷味", "酥炸甜不辣與脆麵", "養生老火湯滷味"], "mapX": 56, "mapY": 37}, {"id": "store-30", "name": "食神滷味（大埔店）", "category": "snack", "categoryLabel": "美味小吃", "categoryIcon": "Utensils", "tag": "四種特色湯頭 ‧ 180種新鮮食材當天現滷", "rating": 4.6, "reviewCount": 280, "priceRange": "$$", "priceText": "$50-$200", "address": "彰化縣彰化市大埔路571號", "phone": "0906-516-170", "hours": "營業時間：17:40-00:50 (週一公休)", "openStatus": "營業中", "image": "store_images/shishen_luwei.jpg", "localImage": "store_images/shishen_luwei.jpg", "description": "｜四種口味｜獨門招牌醬、爆紅麻辣燙、清爽和風燙(蔬果老火湯系列)、泡菜燙 180種新鮮食材輪替販售， 滷湯每日更換、食材當天現滷， 歡迎您光臨！", "signatureDishes": ["獨門招牌醬滷味", "清爽和風燙(蔬果老火湯)", "泡菜燙綜合麵食套餐"], "mapX": 57, "mapY": 50}, {"id": "store-31", "name": "88 Pasta 義式杯麵（大埔店）", "category": "meal", "categoryLabel": "平價義麵/焗烤", "categoryIcon": "Utensils", "tag": "平價客製義大利麵燉飯焗烤", "rating": 4.7, "reviewCount": 280, "priceRange": "$", "priceText": "$70-$150", "address": "彰化縣彰化市大埔路572號", "phone": "0931-292970", "hours": "營業時間：11:00-14:30 / 16:30-21:00 (週一公休)", "openStatus": "營業中", "image": "assets/stores/88pasta.jpg", "localImage": "store_images/88pasta.jpg", "description": "大埔商圈超高CP值人氣平價義大利麵與焗烤專賣！主打客製化經典四款主廚特調醬料（茄汁紅醬、奶香白醬、羅勒青醬、咖哩黃醬），現點現煮義大利麵、燉飯與雙倍起司焗烤，百元有找澎湃飽足！", "signatureDishes": ["奶香白醬培根雞肉義大利麵", "羅勒青醬鮮蝦蛤蜊燉飯", "經典茄汁紅醬焗烤麵", "雙倍起司香濃咖哩麵"], "mapX": 53, "mapY": 33}, {"id": "store-32", "name": "茜芭の鍋燒麵（彰化總部）", "category": "meal", "categoryLabel": "鍋燒麵食", "categoryIcon": "Utensils", "tag": "濃郁柴魚海鮮高湯", "rating": 5.0, "reviewCount": 240, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路572之1號", "phone": "04-7116786", "hours": "營業時間：11:00-14:00 / 16:30-20:30", "openStatus": "營業中", "image": "assets/stores/p4_img3.png", "localImage": "store_images/p4_img3.png", "description": "滿星5.0推薦的暖心鍋燒麵名店！堅持使用天然食材慢熬甘甜柴魚高湯，用料實在包含鮮蝦、蛤蜊、肉片與溏心蛋，意麵吸汁彈牙，湯頭鮮美回甘。", "signatureDishes": ["特選海鮮鍋燒意麵", "濃醇起司牛奶鍋燒麵", "日式柴魚鍋燒烏龍麵", "香濃麻辣鍋燒冬粉"], "mapX": 57, "mapY": 37}, {"id": "store-33", "name": "久元一口煎包（久元一口煎餃）", "category": "snack", "categoryLabel": "手工煎餃/點心", "categoryIcon": "Utensils", "tag": "金黃冰花脆皮手工鮮肉一口煎餃", "rating": 4.8, "reviewCount": 290, "priceRange": "$", "priceText": "$50-$120", "address": "彰化縣彰化市大埔路585號", "phone": "0915-000439", "hours": "營業時間：06:30-08:00 / 15:00-19:00 (週日公休)", "openStatus": "營業中", "image": "assets/stores/jiuyuan_dumpling.jpg", "localImage": "store_images/jiuyuan_dumpling.jpg", "description": "大埔路超高人氣排隊金黃脆皮一口煎餃！堅持現包現煎，底部煎出誘人金黃酥脆冰花，內餡飽滿多汁，咬下爆出鮮甜肉汁與蔥香。搭配獨門蒜蓉油膏與特調辣椒醬，一口一顆超級過癮！", "signatureDishes": ["金黃脆皮手工一口煎包", "招牌鮮肉高麗菜冬粉煎包", "古早味冰紅茶"], "mapX": 58, "mapY": 39}, {"id": "store-34", "name": "正強ㄟ灶咖-鈺膳坊", "category": "meal", "categoryLabel": "台味主食便當", "categoryIcon": "Utensils", "tag": "五星好評家常便當", "rating": 5.0, "reviewCount": 190, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路585號", "phone": "0986-730-511", "hours": "營業時間：11:00-14:00 / 16:30-20:30 (週日公休)", "openStatus": "營業中", "image": "assets/stores/p3_img4.png", "localImage": "store_images/p3_img4.png", "description": "在大埔商圈獲得滿分5.0星極高評價的溫馨食堂！菜色清爽不油膩，主打香煎排骨、古早味滷肉與多道每日新鮮現炒時蔬，充滿媽媽的手作溫度。", "signatureDishes": ["古早味招牌香酥排骨飯", "私房香滷爌肉飯", "古早味滷豬腳飯", "香煎嫩雞腿便當"], "mapX": 58, "mapY": 39}, {"id": "store-35", "name": "大埔大腸包小腸", "category": "snack", "categoryLabel": "經典傳統烤物", "categoryIcon": "Flame", "tag": "現烤炭香手工香腸米腸", "rating": 4.7, "reviewCount": 310, "priceRange": "$", "priceText": "$1-$100", "address": "彰化縣彰化市大埔路614號", "phone": "0932-614000", "hours": "營業時間：17:00-22:00 (售完為止)", "openStatus": "營業中", "image": "assets/stores/dapu_dachang.jpg", "localImage": "store_images/dapu_dachang.jpg", "description": "大埔路街邊經典台味炭烤排隊名攤！嚴選現烤手作高粱酒香腸與古早味香糯米腸，炭火慢烤香氣四溢。夾入現切蒜片、酸菜、小黃瓜與特調醬汁，外皮微脆米香濃郁超涮嘴！", "signatureDishes": ["招牌炭烤大腸包小腸", "古法手作高粱酒香腸", "炭烤花生糯米腸", "特製蒜味酸菜雙拼"], "mapX": 61, "mapY": 42}, {"id": "store-36", "name": "芭樂咬一口（水果切盤）", "category": "shopping", "categoryLabel": "現切水果/飲品", "categoryIcon": "ShoppingBag", "tag": "現切新鮮甘草芭樂鮮果盒", "rating": 4.8, "reviewCount": 230, "priceRange": "$", "priceText": "$50-$150", "address": "彰化縣彰化市大埔路614號", "phone": "0963-614001", "hours": "營業時間：15:00-21:30", "openStatus": "營業中", "image": "assets/stores/guava_bite.jpg", "localImage": "store_images/guava_bite.jpg", "description": "大埔路人氣現切鮮果專賣攤位！嚴選產地直送香脆燕巢芭樂與四季鮮果現點現切，搭配獨門中藥甘草粉、梅子粉或金桔檸檬醬汁，清脆多汁、酸甜爽口生津解膩！", "signatureDishes": ["招牌特調甘草脆芭樂", "酸甜金桔檸檬芭樂", "古早味梅粉芭樂", "四季新鮮綜合水果盒"], "mapX": 61, "mapY": 43}, {"id": "store-37", "name": "非你莫薯", "category": "snack", "categoryLabel": "炸物點心", "categoryIcon": "Flame", "tag": "現炸金黃地瓜脆薯與炸物點心", "rating": 4.6, "reviewCount": 240, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路614號", "phone": "0958-810774", "hours": "營業時間：10:30-19:30 (週三、週日公休)", "openStatus": "營業中", "image": "assets/stores/feinimoshu.jpg", "localImage": "store_images/feinimoshu.jpg", "description": "大埔路極具人氣的特色炸物脆薯專賣名店！嚴選在地優質地瓜與馬鈴薯現點現炸，金黃酥脆外皮裹著綿密香甜內餡，搭配柴魚、特調梅粉與多種秘製醬料，下課追劇宵夜必點！", "signatureDishes": ["招牌黃金地瓜薯條", "特調梅粉黃金脆薯", "柴魚香脆炸豆腐", "酥炸無骨雞塊"], "mapX": 61, "mapY": 42}, {"id": "store-38", "name": "佳佳豆花", "category": "snack", "categoryLabel": "手工甜品", "categoryIcon": "Utensils", "tag": "古早味滑嫩豆花配料豐富", "rating": 4.8, "reviewCount": 320, "priceRange": "$", "priceText": "$1-$100", "address": "彰化縣彰化市大埔路619號", "phone": "04-7126899", "hours": "營業時間：12:00-21:30", "openStatus": "營業中", "image": "assets/stores/jiajia_douhua.jpg", "localImage": "store_images/jiajia_douhua.jpg", "description": "大埔路超人氣古早味甜品名店！主打純手工現做滑嫩豆花，豆香濃郁入口即化。搭配熬煮軟綿花生、Q彈粉圓、蜜紅豆與大甲芋圓，淋上獨門熬煮濃醇黑糖水，銅板價份量超澎湃！", "signatureDishes": ["招牌古早味綜合豆花", "軟綿花生嫩豆花", "Q彈黑糖粉圓豆花", "仙草雪花冰 / 燒仙草"], "mapX": 62, "mapY": 43}, {"id": "store-39", "name": "辰品屋豆漿", "category": "breakfast", "categoryLabel": "中式早宵夜", "categoryIcon": "Utensils", "tag": "傳統古早味早宵夜", "rating": 3.8, "reviewCount": 290, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路619號", "phone": "04-7125566", "hours": "營業時間：16:00-02:00", "openStatus": "已打烊", "image": "assets/stores/p3_img2.png", "localImage": "store_images/p3_img2.png", "description": "營業涵蓋傍晚至深夜的傳統豆漿名店，現烤燒餅油條、濃醇非基改豆漿、酥香蛋餅與多汁小籠包，是夜晚撫慰飢腸轆轆靈魂的溫暖補給站。", "signatureDishes": ["現磨香濃無糖清漿豆漿", "酥脆燒餅夾蔥蛋油條", "手工鮮肉小籠湯包", "傳統現煎蔥抓餅"], "mapX": 61, "mapY": 43}, {"id": "store-40", "name": "駿哥炸魷魚大埔阿明分店", "category": "snack", "categoryLabel": "炸物海鮮", "categoryIcon": "Flame", "tag": "鮮嫩酥脆深海大魷魚", "rating": 5.0, "reviewCount": 160, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路619號", "phone": "0933-456789", "hours": "營業時間：16:00-23:00", "openStatus": "已打烊", "image": "assets/stores/p3_img3.png", "localImage": "store_images/p3_img3.png", "description": "主打整隻深海大魷魚現點現裹粉香炸，外層酥脆無比、肉質厚實鮮甜多汁，搭配蒜味、椒鹽或特製泰式酸辣醬，香氣撲鼻，口口過癮！", "signatureDishes": ["招牌香酥整隻深海大魷魚", "酥炸深海魷魚圈", "椒鹽四季豆", "現炸杏鮑菇"], "mapX": 61, "mapY": 42}, {"id": "store-41", "name": "蒸餃之家", "category": "meal", "categoryLabel": "中式麵點", "categoryIcon": "Utensils", "tag": "皮薄餡多鮮甜爆汁", "rating": 4.0, "reviewCount": 350, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路623號", "phone": "04-7129990", "hours": "營業時間：11:00-20:00 (週一公休)", "openStatus": "營業中", "image": "assets/stores/p3_img1.png", "localImage": "store_images/p3_img1.png", "description": "現包現蒸的皮薄蒸餃，內餡選用新鮮溫體豬肉與鮮脆蔬菜，熱騰騰出籠時汁水四溢，搭配酸辣湯或牛肉湯更是一絕，深受上班族與學生族喜愛。", "signatureDishes": ["招牌現包手工鮮肉蒸餃", "皮薄餡滿手工水餃", "香濃古早味酸辣湯", "紅油炒手"], "mapX": 62, "mapY": 44}, {"id": "store-42", "name": "進爆快炒(大埔)店", "category": "meal", "categoryLabel": "熱炒便當/快炒", "categoryIcon": "Flame", "tag": "大火鑊氣平價快炒炒飯", "rating": 4.8, "reviewCount": 350, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路632號", "phone": "04-7119069", "hours": "營業時間：10:00-14:00 / 16:30-21:30", "openStatus": "營業中", "image": "assets/stores/jinbao_kuaichao.jpg", "localImage": "store_images/jinbao_kuaichao.jpg", "description": "大埔路超高人氣排隊快炒名店！堅持大火爆炒，鑊氣十足、粒粒分明！招牌肉絲炒飯、牛肉炒麵、蔥爆牛肉、宮保雞丁與各式家常快炒熱炒，份量澎湃美味平價！", "signatureDishes": ["招牌大火鑊氣肉絲蛋炒飯", "特製沙茶牛肉炒麵", "鮮嫩蔥爆牛肉熱炒", "香辣宮保雞丁"], "mapX": 63, "mapY": 45}, {"id": "store-43", "name": "泰冰涼-泰式奶茶專賣店", "category": "drink", "categoryLabel": "泰式飲品", "categoryIcon": "Coffee", "tag": "正宗道地手標泰奶", "rating": 4.4, "reviewCount": 210, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路633號", "phone": "04-7117001", "hours": "營業時間：10:00-22:00", "openStatus": "營業中", "image": "assets/stores/p2_img5.png", "localImage": "store_images/p2_img5.png", "description": "引進泰國手標牌茶葉與道地煉乳，現場手沖現拉濃醇泰式奶茶、泰式綠奶茶與檸檬茶，甜香絲滑、冰涼消暑，帶來濃濃南洋街頭風情。", "signatureDishes": ["正宗道地手標泰式奶茶", "泰式翡翠綠奶茶", "清爽泰式檸檬紅茶", "紅顏知己粉紅凍奶"], "mapX": 63, "mapY": 46}, {"id": "store-44", "name": "菜公店嘉義火雞肉飯", "category": "meal", "categoryLabel": "台味經典便當", "categoryIcon": "Utensils", "tag": "道地嘉義火雞肉飯", "rating": 3.5, "reviewCount": 280, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路636號", "phone": "04-7135889", "hours": "營業時間：11:00-20:00", "openStatus": "營業中", "image": "assets/stores/p4_img4.png", "localImage": "store_images/p4_img4.png", "description": "將正統嘉義火雞肉飯風味帶入彰化大埔商圈，火雞肉絲嫩而不柴，淋上香濃火雞油與特調油蔥醬汁，配上味噌湯與燙青菜，快速美味又平實。", "signatureDishes": ["正宗嘉義火雞肉飯", "鮮嫩火雞肉片切盤", "古早味味噌豆腐湯", "香滷油豆腐與滷蛋"], "mapX": 63, "mapY": 47}, {"id": "store-45", "name": "金村香噴噴三角骨", "category": "snack", "categoryLabel": "炸物小吃", "categoryIcon": "Flame", "tag": "吮指難忘招牌三角骨", "rating": 4.2, "reviewCount": 230, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路638號", "phone": "0911-311-219", "hours": "營業時間：16:00-22:00 (週二、週四、週日公休)", "openStatus": "已打烊", "image": "assets/stores/p4_img5.png", "localImage": "store_images/p4_img5.png", "description": "以炸三角骨聞名的大埔炸物攤位！肉質緊實富彈性，醃料香氣透骨，炸得外酥肉嫩，撒上特調胡椒粉令人越啃越香、欲罷不能。", "signatureDishes": ["秘製香酥三角骨 (吮指招牌)", "現炸香蔥蒜味魷魚", "特製香脆花枝丸", "香酥黃金大雞排"], "mapX": 63, "mapY": 48}, {"id": "store-46", "name": "SinAn 炘安美學", "category": "beauty", "categoryLabel": "美業沙龍", "categoryIcon": "Sparkles", "tag": "頂級客製霧眉護膚", "rating": 5.0, "reviewCount": 180, "priceRange": "$$$", "priceText": "依服務項目計費", "address": "彰化縣彰化市大埔路642號", "phone": "0984-514-345", "hours": "營業時間：09:30-20:30 (採全預約制)", "openStatus": "營業中", "image": "assets/stores/p1_img1.png", "localImage": "store_images/p1_img1.png", "description": "大埔商圈知名專業紋繡與護膚美學中心，提供韓式半永久霧眉、客製化美睫、臉部深層保養與專業肌膚調理，採預約制，深受在地女性與質感客群好評。", "signatureDishes": ["頂級客製韓式半永久霧眉", "深層毛孔淨化粉刺調理", "日式角蛋白美睫設計", "專業熱蠟美肌護理"], "mapX": 64, "mapY": 48}, {"id": "store-47", "name": "軍茶-彰化大埔店", "category": "drink", "categoryLabel": "人氣手搖", "categoryIcon": "Coffee", "tag": "超值平價手搖飲", "rating": 4.8, "reviewCount": 320, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路648號", "phone": "04-7113875", "hours": "營業時間：10:00-20:30", "openStatus": "營業中", "image": "assets/stores/p1_img2.png", "localImage": "store_images/p1_img2.png", "description": "主打高CP值與大份量的人氣手搖飲品店，嚴選高山原茶，招牌烏龍茶香甘醇、茶凍鮮奶茶口感層次豐富，是大埔路午後消暑必備飲品。", "signatureDishes": ["軍茶招牌純茶", "茶凍鮮奶茶", "冬瓜檸檬山粉圓"], "mapX": 65, "mapY": 50}, {"id": "store-48", "name": "龍鹽酥雞 彰化大埔店", "category": "snack", "categoryLabel": "炸物小吃", "categoryIcon": "Flame", "tag": "彰化鹽酥雞傳奇名店", "rating": 4.8, "reviewCount": 1000, "priceRange": "$$", "priceText": "$200-$400", "address": "彰化縣彰化市大埔路658號", "phone": "04-7119616", "hours": "營業時間：16:00-23:30", "openStatus": "已打烊", "image": "assets/stores/p1_img3.png", "localImage": "store_images/p1_img3.png", "description": "源自北斗的超人氣炸物指標名店！獨門秘方醃漬無骨鹽酥雞，炸至金黃酥香，搭配新鮮九層塔、洋蔥絲與特調胡椒鹽，宵夜排隊人氣極高。", "signatureDishes": ["招牌無骨鹽酥雞", "深海魷魚圈/魷魚腳", "雞蛋嫩豆腐", "手工酥脆甜不辣"], "mapX": 66, "mapY": 53}, {"id": "store-49", "name": "熊熊想吃－窯烤披薩", "category": "meal", "categoryLabel": "義式披薩", "categoryIcon": "Flame", "tag": "超人氣藍色手作柴燒窯烤披薩車", "rating": 4.6, "reviewCount": 220, "priceRange": "$$", "priceText": "$200-$400", "address": "彰化縣彰化市大埔路671號", "phone": "0970-390-400", "hours": "營業時間：15:30-20:00 (售完為止，餐車出攤公告見粉專)", "openStatus": "營業中", "image": "assets/stores/bear_pizza.jpg", "localImage": "store_images/bear_pizza.jpg", "description": "大埔商圈特色柴燒窯烤手工披薩！義大利進口麵粉低溫慢速發酵，高溫窯烤餅皮外脆內Q帶有柴香麥香，鋪上滿滿牽絲莫札瑞拉起司與豐富食材，聚餐分享首選！", "signatureDishes": ["經典瑪格麗特柴燒披薩", "海鮮總匯窯烤披薩", "蒜香黑胡椒燻鴨披薩", "起司蜂蜜蘋果甜披薩"], "mapX": 67, "mapY": 54}, {"id": "store-50", "name": "阿婆拉仔麵", "category": "breakfast", "categoryLabel": "傳統早午餐", "categoryIcon": "Utensils", "tag": "大埔在地老味道", "rating": 4.1, "reviewCount": 420, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路680號", "phone": "04-7123456", "hours": "營業時間：06:30-13:30 (售完為止)", "openStatus": "營業中", "image": "assets/stores/p1_img4.png", "localImage": "store_images/p1_img4.png", "description": "大埔在地人從小吃到大的古早味早餐！傳統油麵淋上濃郁肉燥與蒜泥，搭配熱呼呼的膨皮湯、骨仔肉湯與豆腐油豆腐，銅板價格大份量飽足感十足。", "signatureDishes": ["古早味傳統拉仔麵", "招牌骨仔肉湯", "豆腐椪皮綜合湯", "香滷油豆腐與滷蛋"], "mapX": 68, "mapY": 56}, {"id": "store-51", "name": "尚品芋圓（彰化大埔店）", "category": "snack", "categoryLabel": "手工甜品", "categoryIcon": "Utensils", "tag": "質感甜品芋圓湯圓豆花燒仙草", "rating": 4.9, "reviewCount": 280, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路685號1樓", "phone": "0978-129-885", "hours": "營業時間：11:00-21:30", "openStatus": "營業中", "image": "assets/stores/shangpin_yuyuan.jpg", "localImage": "store_images/shangpin_yuyuan.jpg", "description": "大埔商圈超人氣文青質感甜品專賣名店！主打手工Q彈芋圓、古早味湯圓、鹽滷嫩豆花與冬季熱呼呼燒仙草。用料紮實飽滿，店面明亮舒適，四季皆宜的暖心甜品！", "signatureDishes": ["招牌綜合手工芋圓冰", "手作鹽滷嫩豆花", "古早味芝麻花生湯圓", "冬季限定暖心燒仙草"], "mapX": 68, "mapY": 56}, {"id": "store-52", "name": "品茶道", "category": "drink", "categoryLabel": "人氣手搖", "categoryIcon": "Coffee", "tag": "淬鍊甘醇好茶", "rating": 4.7, "reviewCount": 260, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路690號", "phone": "0901-359-567", "hours": "營業時間：10:00-20:30", "openStatus": "營業中", "image": "assets/stores/p2_img1.png", "localImage": "store_images/p2_img1.png", "description": "堅持現泡淬取高優質茶葉，茶韻清香不苦澀。招牌熟成紅茶、文山青茶與新鮮水果茶系列深獲大埔路茶飲愛好者熱烈好評。", "signatureDishes": ["梅果翡翠綠茶", "品茶道熟成紅茶拿鐵", "百香雙Q綠茶", "手作仙草凍鮮奶茶"], "mapX": 69, "mapY": 58}, {"id": "store-53", "name": "嵐田拉麵", "category": "meal", "categoryLabel": "日式拉麵", "categoryIcon": "Utensils", "tag": "濃厚日式豚骨拉麵", "rating": 4.4, "reviewCount": 1000, "priceRange": "$$", "priceText": "$200-$400", "address": "彰化縣彰化市大埔路691號", "phone": "04-7113881", "hours": "營業時間：11:30-13:30 / 17:30-20:30 (週二公休)", "openStatus": "營業中", "image": "assets/stores/p2_img4.png", "localImage": "store_images/p2_img4.png", "description": "大埔商圈高評價職人日式拉麵店！耗時熬煮濃郁豚骨高湯，搭配炙燒厚切叉燒肉與溏心蛋，麵條軟硬適中吸飽湯汁精華，濃郁香氣令人讚不絕口。", "signatureDishes": ["濃厚豚骨叉燒拉麵", "焦蔥豚骨拉麵", "地獄辛味噌拉麵", "柚香雞清湯拉麵", "炙燒叉燒飯"], "mapX": 69, "mapY": 57}, {"id": "store-54", "name": "芊億飯包", "category": "meal", "categoryLabel": "傳統便當", "categoryIcon": "Utensils", "tag": "廣式脆皮烤鴨桶子油雞飯包", "rating": 4.3, "reviewCount": 310, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路693號", "phone": "04-7112298", "hours": "營業時間：10:30-14:00 / 16:30-20:00 (週日公休)", "openStatus": "營業中", "image": "assets/stores/qianyi_bento.jpg", "localImage": "store_images/qianyi_bento.jpg", "description": "大埔路知名廣式燒臘飯包老字號！榮獲彰化縣衛生局餐飲衛生評核優良。店內招牌廣式脆皮烤鴨、桶子油雞、蜜汁叉燒與多拼燒臘飯包，肉質鮮嫩多汁、油亮焦香超下飯！", "signatureDishes": ["招牌脆皮烤鴨飯", "油雞烤鴨雙拼飯", "蜜汁香嫩叉燒飯", "招牌三寶飯"], "mapX": 69, "mapY": 58}, {"id": "store-55", "name": "晶兆購商行", "category": "shopping", "categoryLabel": "生活美業/百貨", "categoryIcon": "ShoppingBag", "tag": "生活日用百貨與精選商品團購", "rating": 4.8, "reviewCount": 210, "priceRange": "$", "priceText": "依商品標示", "address": "彰化縣彰化市大埔路698號", "phone": "04-7128698", "hours": "營業時間：10:00-21:00", "openStatus": "營業中", "image": "assets/stores/jingzhaogou.jpg", "localImage": "store_images/jingzhaogou.jpg", "description": "大埔商圈深具口碑的優質生活百貨與精選團購商行！專營各類生活居家用品、精選零食伴手禮、日韓熱銷好物、美妝保養與生鮮團購預定，門市取貨便利親切，在地居民採買好幫手！", "signatureDishes": ["生活居家優質選品", "熱門團購零食伴手禮", "日韓熱銷生活百貨", "節慶生鮮禮盒預購"], "mapX": 70, "mapY": 59}, {"id": "store-56", "name": "清溪自助餐", "category": "meal", "categoryLabel": "主食便當", "categoryIcon": "Utensils", "tag": "百道新鮮現炒熱菜與低卡便當", "rating": 4.6, "reviewCount": 460, "priceRange": "$", "priceText": "$50-$130", "address": "彰化縣彰化市大埔路707號", "phone": "04-7117293", "hours": "營業時間：10:30-14:00 / 16:00-20:00 (週日公休)", "openStatus": "營業中", "image": "assets/stores/qingxi_buffet.jpg", "localImage": "store_images/qingxi_buffet.jpg", "description": "彰化大埔路超高人氣自助餐名店！每日提供上百道現炒熱騰騰菜色、多樣鮮魚肉品與健康少油低卡便當（搭配營養紫米飯）。菜色豐富衛生美味、價格親民公道，是在地家庭與上班族正餐外帶的最愛。", "signatureDishes": ["每日現炒百道熱菜", "主廚現煎排骨便當", "低卡少油紫米餐盒", "新鮮現煎魚排"], "mapX": 75, "mapY": 65}, {"id": "store-57", "name": "五八地瓜球（大埔店）", "category": "snack", "categoryLabel": "銅板點心", "categoryIcon": "Flame", "tag": "外酥內Q金黃地瓜球", "rating": 5.0, "reviewCount": 380, "priceRange": "$", "priceText": "$1-$200", "address": "彰化縣彰化市大埔路723號", "phone": "0985-813-869", "hours": "營業時間：15:00-21:00 (售完為止)", "openStatus": "已打烊", "image": "assets/stores/p2_img3.png", "localImage": "store_images/p2_img3.png", "description": "大埔路超人氣排隊下午茶小吃！大顆飽滿的雙色地瓜球，經過多次大火重壓翻炸，外皮極致酥脆、內層Q彈香甜不油膩，可灑梅粉或可可粉等多重風味。", "signatureDishes": ["大包雙色招牌地瓜球", "信義甘梅地瓜球", "嚴選海苔地瓜球", "傳統椒鹽地瓜球"], "mapX": 72, "mapY": 63}, {"id": "store-58", "name": "詠立水果行", "category": "shopping", "categoryLabel": "生鮮水果", "categoryIcon": "ShoppingBag", "tag": "新鮮產地直送水果", "rating": 3.8, "reviewCount": 150, "priceRange": "$", "priceText": "時價批發零售", "address": "彰化縣彰化市大埔路727號", "phone": "04-7112508", "hours": "營業時間：08:00-21:30", "openStatus": "營業中", "image": "assets/stores/p2_img2.png", "localImage": "store_images/p2_img2.png", "description": "在地批發零售水果行，每日供應當季產地直送新鮮水果、精選水果禮盒及現切水果，品質新鮮甜度高，服務親切公道。", "signatureDishes": ["當季產地直送新鮮水果", "精美客製節慶水果禮盒", "新鮮現切水果盤"], "mapX": 73, "mapY": 65}, {"id": "store-59", "name": "滿竹鹽滷豆花", "category": "snack", "categoryLabel": "手工甜品", "categoryIcon": "Utensils", "tag": "天然海水鹽滷古法手工純豆花", "rating": 4.9, "reviewCount": 260, "priceRange": "$", "priceText": "$35-$80", "address": "彰化縣彰化市延平路389巷2號1樓", "phone": "04-7113200", "hours": "營業時間：11:00-21:00 (不定期公休)", "openStatus": "營業中", "image": "assets/stores/manzhu_douhua.jpg", "localImage": "store_images/manzhu_douhua.jpg", "description": "大埔商圈極受在地好評的手工天然鹽滷豆花專賣名店！堅持非基改黃豆古法研磨，採用天然海洋鹽滷凝固，質地細緻綿密帶有自然濃郁豆香。搭配自炒黑糖水、慢熬軟花生、萬丹紅豆與手工芋圓，天然健康無負擔！", "signatureDishes": ["招牌天然鹽滷原味豆花", "黑糖雙色手工芋圓豆花", "慢熬軟綿花生豆花", "古早味黑糖豆漿豆花"], "mapX": 46, "mapY": 26}, {"id": "store-60", "name": "曦流咖啡 Solura Café", "category": "drink", "categoryLabel": "精品咖啡/輕食", "categoryIcon": "Coffee", "tag": "質感精品咖啡與澎湃早午餐輕食", "rating": 4.6, "reviewCount": 152, "priceRange": "$$", "priceText": "$100-$300", "address": "彰化縣彰化市中興路219號", "phone": "04-7115008", "hours": "營業時間：08:30-17:00", "openStatus": "營業中", "image": "assets/stores/xiliu_coffee.jpg", "localImage": "store_images/xiliu_coffee.jpg", "description": "鄰近大埔商圈與彰基生活圈的極具質感精品咖啡館！嚴選各國單品咖啡豆自家烘焙，提供精緻拉花拿鐵、手沖單品咖啡，以及份量澎湃的新鮮沙拉、可頌早午餐拼盤與手作甜點，用餐氛圍悠閒優雅。", "signatureDishes": ["職人手沖精品咖啡", "經典拉花拿鐵", "莊園可頌早午餐拼盤", "松露奶油野菇義大利麵"], "mapX": 15, "mapY": 12}, {"id": "store-61", "name": "明美蔘藥行", "category": "shopping", "categoryLabel": "生活美業/蔘藥", "categoryIcon": "ShoppingBag", "tag": "專業漢方養生中藥", "rating": 4.9, "reviewCount": 210, "priceRange": "$$", "priceText": "依藥膳蔘材項目計費", "address": "彰化縣彰化市文心街36號1樓", "phone": "04-7135596", "hours": "營業時間：09:00-21:00", "openStatus": "營業中", "image": "assets/stores/mingmei_herbal.jpg", "localImage": "store_images/mingmei_herbal.jpg", "description": "大埔商圈深耕口碑老字號蔘藥行！專營道地優質高貴漢方藥材、嚴選高麗蔘、西洋蔘、四季溫補養生膳食藥膳包、特製草本養生茶與客製中藥調理，品質純正信譽卓越。", "signatureDishes": ["頂級高麗蔘/西洋蔘片", "四季溫補養生藥膳排骨包", "特調草本漢方養生茶", "客製精緻研磨漢方粉"], "mapX": 45, "mapY": 25}];
+
+    // -------------------------------------------------------------
+    // TAIPEI LIVE TIME SYNCHRONIZATION ENGINE (Asia/Taipei UTC+8)
+    // -------------------------------------------------------------
+    function getTaipeiNow() {
+      const now = new Date();
+      // Formats safely in Asia/Taipei timezone regardless of user's device/location timezone
+      const taipeiStr = now.toLocaleString("en-US", { timeZone: "Asia/Taipei" });
+      return new Date(taipeiStr);
+    }
+
+    function parseStoreTaipeiStatus(store, taipeiDate) {
+      const hours = store.hours || '';
+      const day = taipeiDate.getDay(); // 0: Sun, 1: Mon, ..., 6: Sat
+      const hour = taipeiDate.getHours();
+      const min = taipeiDate.getMinutes();
+      const nowMins = hour * 60 + min;
+
+      // 1. Check weekly closing day
+      const dayOffMap = {
+        '週日': 0, '星期日': 0, '禮拜日': 0,
+        '週一': 1, '星期一': 1, '禮拜一': 1,
+        '週二': 2, '星期二': 2, '禮拜二': 2,
+        '週三': 3, '星期三': 3, '禮拜三': 3,
+        '週四': 4, '星期四': 4, '禮拜四': 4,
+        '週五': 5, '星期五': 5, '禮拜五': 5,
+        '週六': 6, '星期六': 6, '禮拜六': 6
+      };
+
+      for (const [kw, dVal] of Object.entries(dayOffMap)) {
+        if (hours.includes(`${kw}公休`) || hours.includes(`${kw}店休`) || hours.includes(`${kw}休`)) {
+          if (day === dVal) {
+            return {
+              isOpen: false,
+              statusText: '今日公休',
+              statusClass: 'status-closed',
+              badgeText: `🔴 今日公休 (${kw})`,
+              detailText: `今日公休 ‧ 依店家現場公告為準`
+            };
+          }
+        }
+      }
+
+      const intervals = [];
+
+      // Match all "HH:MM-HH:MM" or "HH:MM~HH:MM"
+      const rangeRegex = /(\d{1,2}):(\d{2})\s*[-~至]\s*(\d{1,2}):(\d{2})/g;
+      let match;
+      while ((match = rangeRegex.exec(hours)) !== null) {
+        const startMins = parseInt(match[1]) * 60 + parseInt(match[2]);
+        let endMins = parseInt(match[3]) * 60 + parseInt(match[4]);
+        if (endMins < startMins) endMins += 24 * 60; // overnight
+        intervals.push({ start: startMins, end: endMins, rawStart: `${match[1]}:${match[2]}`, rawEnd: `${match[3]}:${match[4]}` });
+      }
+
+      // If no range, check "結束營業時間：HH:MM" or "營業至 HH:MM"
+      if (intervals.length === 0) {
+        const toMatch = hours.match(/(?:結束營業時間[：:]|營業至)\s*(\d{1,2}):(\d{2})/);
+        if (toMatch) {
+          const endMins = parseInt(toMatch[1]) * 60 + parseInt(toMatch[2]);
+          const startMatch = hours.match(/(?:清晨|早上|下午|晚上)?\s*(\d{1,2}):(\d{2})\s*(?:開|起)/);
+          const startMins = startMatch 
+            ? parseInt(startMatch[1]) * 60 + parseInt(startMatch[2])
+            : ((endMins <= 14 * 60) ? 5 * 60 + 30 : 10 * 60 + 30);
+          
+          intervals.push({ start: startMins, end: endMins, rawStart: `${Math.floor(startMins/60)}:${startMins%60 < 10 ? '0':''}${startMins%60}`, rawEnd: `${toMatch[1]}:${toMatch[2]}` });
+        }
+      }
+
+      // If no range, check "開始營業時間：HH:MM"
+      if (intervals.length === 0) {
+        const fromMatch = hours.match(/(?:開始營業時間[：:]|營業時間[：:]|下午|晚上)\s*(\d{1,2}):(\d{2})/);
+        if (fromMatch) {
+          const startMins = parseInt(fromMatch[1]) * 60 + parseInt(fromMatch[2]);
+          const endMins = Math.min(24 * 60, startMins + 6 * 60);
+          intervals.push({ start: startMins, end: endMins, rawStart: `${fromMatch[1]}:${fromMatch[2]}`, rawEnd: `${Math.floor(endMins/60)}:${endMins%60 < 10 ? '0':''}${endMins%60}` });
+        }
+      }
+
+      // Evaluate against nowMins (Supporting overnight hours e.g. 17:00-02:00)
+      if (intervals.length > 0) {
+        for (const iv of intervals) {
+          const checkMins = (nowMins < iv.start && iv.end >= 24 * 60) ? (nowMins + 24 * 60) : nowMins;
+          if (checkMins >= iv.start && checkMins <= iv.end) {
+            const remainingMins = iv.end - checkMins;
+            if (remainingMins <= 30 && remainingMins > 0) {
+              return {
+                isOpen: true,
+                statusText: '即將打烊',
+                statusClass: 'status-closing',
+                badgeText: `🟡 即將打烊 (${iv.rawEnd})`,
+                detailText: `現正營業中 ‧ 即將於 ${iv.rawEnd} 打烊`
+              };
+            }
+            return {
+              isOpen: true,
+              statusText: '營業中',
+              statusClass: 'status-open',
+              badgeText: `🟢 營業中 (至 ${iv.rawEnd})`,
+              detailText: `現正營業中 ‧ 營業至 ${iv.rawEnd}`
+            };
+          }
+        }
+
+        // Before first interval
+        if (nowMins < intervals[0].start) {
+          return {
+            isOpen: false,
+            statusText: '休息中',
+            statusClass: 'status-closed',
+            badgeText: `🔴 休息中 (${intervals[0].rawStart} 開店)`,
+            detailText: `今日休息中 ‧ 預計 ${intervals[0].rawStart} 開始營業`
+          };
+        }
+
+        // Between intervals
+        for (let i = 0; i < intervals.length - 1; i++) {
+          if (nowMins > intervals[i].end && nowMins < intervals[i+1].start) {
+            return {
+              isOpen: false,
+              statusText: '午休中',
+              statusClass: 'status-closed',
+              badgeText: `🔴 午休中 (${intervals[i+1].rawStart} 開店)`,
+              detailText: `中場休息中 ‧ 下午 ${intervals[i+1].rawStart} 開始營業`
+            };
+          }
+        }
+
+        // After last interval
+        return {
+          isOpen: false,
+          statusText: '已打烊',
+          statusClass: 'status-closed',
+          badgeText: `🔴 今日已打烊`,
+          detailText: `今日已打烊 ‧ 歡迎明日造訪`
+        };
+      }
+
+      // Fallback
+      const isDefaultOpen = (store.openStatus || '').includes('營業中');
+      return {
+        isOpen: isDefaultOpen,
+        statusText: isDefaultOpen ? '營業中' : '休息中',
+        statusClass: isDefaultOpen ? 'status-open' : 'status-closed',
+        badgeText: isDefaultOpen ? '🟢 營業中' : '🔴 休息中',
+        detailText: hours || (isDefaultOpen ? '營業中' : '休息中')
+      };
+    }
+
+    const WEEKDAYS_FULL = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+    function updateTaipeiLiveClock() {
+      const now = getTaipeiNow();
+      const y = now.getFullYear();
+      const m = String(now.getMonth() + 1).padStart(2, '0');
+      const d = String(now.getDate()).padStart(2, '0');
+      const w = WEEKDAYS_FULL[now.getDay()];
+      const hh = String(now.getHours()).padStart(2, '0');
+      const mm = String(now.getMinutes()).padStart(2, '0');
+      const ss = String(now.getSeconds()).padStart(2, '0');
+
+      const dateEl = document.getElementById('digitalDateVal');
+      if (dateEl) dateEl.textContent = `${y} 年 ${m} 月 ${d} 日`;
+
+      const weekEl = document.getElementById('digitalWeekVal');
+      if (weekEl) weekEl.textContent = w;
+
+      const hhEl = document.getElementById('clockHH');
+      if (hhEl) hhEl.textContent = hh;
+
+      const mmEl = document.getElementById('clockMM');
+      if (mmEl) mmEl.textContent = mm;
+
+      const ssEl = document.getElementById('clockSS');
+      if (ssEl) ssEl.textContent = ss;
+
+      const navClock = document.getElementById('navTaipeiTime');
+      if (navClock) navClock.textContent = `${hh}:${mm}:${ss}`;
+    }
+
+    // State Management
+    let currentCategory = 'all';
+    let currentSearch = '';
+    let currentSort = 'door-asc';
+    let filterOpenOnly = false;
+    let filterHighRating = false;
+    let filterFavsOnly = false;
+    let currentStore = null;
+
+    // Favorites LocalStorage
+    const FAV_KEY = 'dapu_line_favs_v1';
+    function getFavorites() {
+      try {
+        const raw = localStorage.getItem(FAV_KEY);
+        return raw ? JSON.parse(raw) : [];
+      } catch (e) {
+        return [];
+      }
+    }
+
+    function saveFavorites(favs) {
+      try {
+        localStorage.setItem(FAV_KEY, JSON.stringify(favs));
+      } catch (e) {}
+      updateFavBadge();
+    }
+
+    function toggleFavorite(id, e) {
+      if (e) e.stopPropagation();
+      let favs = getFavorites();
+      const idx = favs.indexOf(id);
+      if (idx > -1) {
+        favs.splice(idx, 1);
+        showToast('已從口袋名單中移除');
+      } else {
+        favs.push(id);
+        showToast('❤️ 已加入口袋名單！');
+      }
+      saveFavorites(favs);
+      renderStores();
+      if (currentStore && currentStore.id === id) {
+        updateModalFavButton(id);
+      }
+    }
+
+    function isFavorited(id) {
+      return getFavorites().includes(id);
+    }
+
+    function updateFavBadge() {
+      const count = getFavorites().length;
+      const badge = document.getElementById('favCountBadge');
+      if (badge) badge.textContent = count;
+    }
+
+    // Filtering and Sorting Algorithm
+    function getFilteredStores() {
+      let result = [...STORES_DATA];
+
+      // Category filter
+      if (currentCategory !== 'all') {
+        if (currentCategory === 'shopping') {
+          result = result.filter(s => s.category === 'shopping' || s.category === 'beauty');
+        } else {
+          result = result.filter(s => s.category === currentCategory);
+        }
+      }
+
+      // Search keyword filter (name, address, dishes, tag, desc)
+      if (currentSearch.trim()) {
+        const q = currentSearch.trim().toLowerCase();
+        result = result.filter(s => {
+          const inName = s.name.toLowerCase().includes(q);
+          const inAddr = s.address.toLowerCase().includes(q);
+          const inTag = (s.tag || '').toLowerCase().includes(q);
+          const inDesc = (s.description || '').toLowerCase().includes(q);
+          const inDishes = (s.signatureDishes || []).some(d => d.toLowerCase().includes(q));
+          return inName || inAddr || inTag || inDesc || inDishes;
+        });
+      }
+
+      // Quick Toggles (Synchronized with Taipei Real-Time Open Status)
+      if (filterOpenOnly) {
+        const tNow = getTaipeiNow();
+        result = result.filter(s => parseStoreTaipeiStatus(s, tNow).isOpen);
+      }
+
+      if (filterHighRating) {
+        result = result.filter(s => (s.rating || 5.0) >= 4.5);
+      }
+
+      if (filterFavsOnly) {
+        const favs = getFavorites();
+        result = result.filter(s => favs.includes(s.id));
+      }
+
+      // Sorting
+      result.sort((a, b) => {
+        if (currentSort === 'rating-desc') {
+          return (b.rating || 5.0) - (a.rating || 5.0);
+        }
+        if (currentSort === 'reviews-desc') {
+          return (b.reviewCount || 0) - (a.reviewCount || 0);
+        }
+        if (currentSort === 'door-desc') {
+          return parseInt(b.id.replace('store-', '')) - parseInt(a.id.replace('store-', ''));
+        }
+        // Default: door-asc
+        return parseInt(a.id.replace('store-', '')) - parseInt(b.id.replace('store-', ''));
+      });
+
+      return result;
+    }
+
+    // Render Store Cards
+    function renderStores() {
+      const grid = document.getElementById('storesGrid');
+      const countNumber = document.getElementById('resultCountNumber');
+      const list = getFilteredStores();
+
+      countNumber.textContent = list.length;
+
+      if (list.length === 0) {
+        grid.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-state-icon">🍽️</div>
+            <div class="empty-state-title">找不到符合條件的美食店家</div>
+            <div class="empty-state-desc">請嘗試調整搜尋關鍵字或清除篩選條件</div>
+            <button class="cat-pill active" onclick="resetFilters()">重設所有篩選條件</button>
+          </div>
+        `;
+        return;
+      }
+
+      const currentTaipei = getTaipeiNow();
+      grid.innerHTML = list.map((s, index) => {
+        const status = parseStoreTaipeiStatus(s, currentTaipei);
+        const favActive = isFavorited(s.id) ? 'active' : '';
+        const doorNum = s.address.match(/大埔路(\d+)/) ? s.address.match(/大埔路(\d+)/)[1] + '號' : s.address.split('市')[1] || s.address;
+        const dishes = (s.signatureDishes || []).slice(0, 3).map(d => `<span class="dish-tag">${d}</span>`).join('');
+        const rating = (s.rating || 5.0).toFixed(1);
+        const reviews = s.reviewCount || 100;
+        const imgSrc = s.localImage || s.image || 'store_images/p1_img1.png';
+
+        return `
+          <article class="store-card" onclick="openStoreModal('${s.id}')">
+            <div class="card-photo-wrap">
+              <img src="${imgSrc}" alt="${s.name}" class="card-photo-img" loading="lazy" onerror="this.src='store_images/p1_img1.png'">
+              
+              <div class="card-top-badges">
+                <span class="door-badge">${doorNum}</span>
+                <button class="btn-fav-heart ${favActive}" onclick="toggleFavorite('${s.id}', event)" title="收藏店家">
+                  ${isFavorited(s.id) ? '❤️' : '🤍'}
+                </button>
+              </div>
+
+              <span class="card-status-pill ${status.statusClass}">${status.badgeText}</span>
+              <span class="card-rating-pill">
+                <span class="rating-star">★</span>
+                <span class="num-font">${rating}</span>
+                <span style="opacity: 0.8; font-size: 0.7rem;">(${reviews})</span>
+              </span>
+            </div>
+
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-store-name">${s.name}</h3>
+                <span class="card-category-tag">${s.categoryLabel || s.category}</span>
+              </div>
+              
+              <div class="card-store-tag">${s.tag || '大埔商圈精選名店'}</div>
+              
+              <div class="card-address-row">
+                <span>📍</span>
+                <span>${s.address}</span>
+              </div>
+
+              <div class="card-dishes">
+                ${dishes}
+              </div>
+
+              <div class="card-footer">
+                <span>查看完整圖文介紹與菜單</span>
+                <span class="arrow">➔</span>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    // Modal Details Logic
+    function openStoreModal(id) {
+      const store = STORES_DATA.find(s => s.id === id);
+      if (!store) return;
+      currentStore = store;
+
+      document.getElementById('modalTitle').textContent = store.name;
+      document.getElementById('modalDoor').textContent = store.id.toUpperCase();
+      document.getElementById('modalTag').textContent = store.tag || '大埔美食商圈特約推薦名店';
+      document.getElementById('modalAddress').textContent = store.address;
+      document.getElementById('modalRating').textContent = `${(store.rating || 5.0).toFixed(1)} (${store.reviewCount || 100}+ 則評論)`;
+      const currentTaipei = getTaipeiNow();
+      const status = parseStoreTaipeiStatus(store, currentTaipei);
+      const hh = String(currentTaipei.getHours()).padStart(2, '0');
+      const mm = String(currentTaipei.getMinutes()).padStart(2, '0');
+      document.getElementById('modalHours').innerHTML = `<span style="display:inline-block; margin-bottom:4px;"><span class="card-status-pill ${status.statusClass}" style="position:static; display:inline-flex; font-size:0.8rem; padding:3px 10px; font-weight:800;">${status.badgeText}</span></span><br/>${store.hours || ''} <span style="font-size:0.75rem; color:var(--text-muted); display:block; margin-top:3px;">(依台北標準時間 ${hh}:${mm} 即時自動核對)</span>`;
+      document.getElementById('modalPrice').textContent = store.priceText || store.priceRange || '$30 - $150';
+      document.getElementById('modalDesc').textContent = store.description || '彰化市大埔商圈人氣必嚐美食名店，嚴選在地食材用心料理。';
+
+      const imgSrc = store.localImage || store.image || 'store_images/p1_img1.png';
+      const imgEl = document.getElementById('modalImg');
+      imgEl.src = imgSrc;
+      imgEl.onerror = () => { imgEl.src = 'store_images/p1_img1.png'; };
+
+      // Dishes
+      const dishesContainer = document.getElementById('modalDishes');
+      dishesContainer.innerHTML = (store.signatureDishes || []).map(d => `<span class="modal-dish-pill">★ ${d}</span>`).join('');
+
+      // Map Button
+      const mapBtn = document.getElementById('modalMapBtn');
+      mapBtn.href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(store.name + ' ' + store.address)}`;
+
+      // Copy Address Button
+      const copyBtn = document.getElementById('modalCopyBtn');
+      copyBtn.onclick = () => {
+        navigator.clipboard.writeText(store.address).then(() => {
+          showToast(`已複製地址：${store.address}`);
+        });
+      };
+
+      // Favorite Button in Modal
+      updateModalFavButton(store.id);
+
+      const modal = document.getElementById('storeModal');
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function updateModalFavButton(id) {
+      const favBtn = document.getElementById('modalFavBtn');
+      if (isFavorited(id)) {
+        favBtn.classList.add('active');
+        favBtn.innerHTML = '<span>❤️</span>';
+      } else {
+        favBtn.classList.remove('active');
+        favBtn.innerHTML = '<span>🤍</span>';
+      }
+      favBtn.onclick = (e) => toggleFavorite(id, e);
+    }
+
+    function closeStoreModal() {
+      const modal = document.getElementById('storeModal');
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+      currentStore = null;
+    }
+
+    // Activity Detail Modal
+    function openActivityModal() {
+      document.getElementById('activityModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeActivityModal() {
+      document.getElementById('activityModal').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Toast Notice
+    function showToast(text) {
+      const toast = document.getElementById('toastMsg');
+      const toastText = document.getElementById('toastText');
+      toastText.textContent = text;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2600);
+    }
+
+    function resetFilters() {
+      currentCategory = 'all';
+      currentSearch = '';
+      filterOpenOnly = false;
+      filterHighRating = false;
+      filterFavsOnly = false;
+      document.getElementById('searchInput').value = '';
+      document.getElementById('searchClearBtn').style.display = 'none';
+      document.getElementById('toggleOpen').classList.remove('active');
+      document.getElementById('toggleHighRating').classList.remove('active');
+      document.querySelectorAll('.cat-pill').forEach(p => {
+        p.classList.toggle('active', p.dataset.cat === 'all');
+      });
+      renderStores();
+    }
+
+    // Event Listeners Initialization
+    document.addEventListener('DOMContentLoaded', () => {
+      updateFavBadge();
+      updateTaipeiLiveClock();
+      renderStores();
+
+      // Start 1-second live clock ticker
+      setInterval(updateTaipeiLiveClock, 1000);
+
+      // Auto-refresh Store Status every 60 seconds
+      setInterval(() => {
+        if (!currentStore) {
+          renderStores();
+        }
+      }, 60000);
+
+      // Street Map Quick Pins
+      const axisContainer = document.getElementById('axisPillsContainer');
+      if (axisContainer) {
+        axisContainer.innerHTML = STORES_DATA.map(s => `
+          <button class="axis-store-pin" onclick="openStoreModal('${s.id}')">
+            ${s.name}
+          </button>
+        `).join('');
+      }
+
+      // Category Pill Click
+      document.querySelectorAll('.cat-pill').forEach(pill => {
+        pill.addEventListener('click', () => {
+          document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          currentCategory = pill.dataset.cat;
+          filterFavsOnly = false;
+          renderStores();
+        });
+      });
+
+      // Search Input
+      const searchInput = document.getElementById('searchInput');
+      const searchClearBtn = document.getElementById('searchClearBtn');
+
+      searchInput.addEventListener('input', (e) => {
+        currentSearch = e.target.value;
+        searchClearBtn.style.display = currentSearch.length > 0 ? 'block' : 'none';
+        renderStores();
+      });
+
+      searchClearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        currentSearch = '';
+        searchClearBtn.style.display = 'none';
+        renderStores();
+        searchInput.focus();
+      });
+
+      // Sort Select
+      document.getElementById('sortSelect').addEventListener('change', (e) => {
+        currentSort = e.target.value;
+        renderStores();
+      });
+
+      // Quick Toggles
+      const toggleOpen = document.getElementById('toggleOpen');
+      toggleOpen.addEventListener('click', () => {
+        filterOpenOnly = !filterOpenOnly;
+        toggleOpen.classList.toggle('active', filterOpenOnly);
+        renderStores();
+      });
+
+      const toggleHighRating = document.getElementById('toggleHighRating');
+      toggleHighRating.addEventListener('click', () => {
+        filterHighRating = !filterHighRating;
+        toggleHighRating.classList.toggle('active', filterHighRating);
+        renderStores();
+      });
+
+      // Fav Filter Drawer
+      const favFilterBtn = document.getElementById('favFilterBtn');
+      favFilterBtn.addEventListener('click', () => {
+        filterFavsOnly = !filterFavsOnly;
+        favFilterBtn.style.borderColor = filterFavsOnly ? '#ea580c' : '';
+        favFilterBtn.style.color = filterFavsOnly ? '#c2410c' : '';
+        renderStores();
+        if (filterFavsOnly) {
+          showToast(`已為您篩選出 ${getFavorites().length} 家收藏的店家`);
+          document.getElementById('storesSection').scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+
+      // Modal Closers
+      document.getElementById('modalCloseBtn').addEventListener('click', closeStoreModal);
+      document.getElementById('storeModal').addEventListener('click', (e) => {
+        if (e.target.id === 'storeModal') closeStoreModal();
+      });
+      document.getElementById('activityModal').addEventListener('click', (e) => {
+        if (e.target.id === 'activityModal') closeActivityModal();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeStoreModal();
+          closeActivityModal();
+        }
+      });
+
+      // Navbar scroll effect
+      window.addEventListener('scroll', () => {
+        const nav = document.getElementById('siteNav');
+        if (window.scrollY > 20) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
