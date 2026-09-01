@@ -943,6 +943,34 @@
   },
   {
     "id": "store-36",
+    "name": "深川鐵板蓋飯",
+    "category": "meal",
+    "categoryLabel": "便當正餐",
+    "categoryIcon": "Utensils",
+    "tag": "大火現炒鐵板肉片 ‧ 附荷包蛋高CP值蓋飯",
+    "rating": 4.7,
+    "reviewCount": 260,
+    "priceRange": "$",
+    "priceText": "$100-$180",
+    "address": "彰化縣彰化市大埔路614號",
+    "phone": "0958-810774",
+    "hours": "營業時間：10:30-19:30 (週三、週日公休)",
+    "openStatus": "營業中",
+    "image": "assets/stores/shenchuan_teppan.jpg",
+    "localImage": "store_images/shenchuan_teppan.jpg",
+    "description": "大埔路超人氣鐵板風味蓋飯！將現點現炒的大火鑊氣鐵板燒料理融入豐盛蓋飯中，招牌鐵板牛肉與豬肉蓋飯均附金黃荷包蛋，肉質鮮嫩醬汁入味超下飯，更有雙份肉量巨飽系列與炒時蔬，是在地學生與上班族午晚餐高CP值首選！",
+    "signatureDishes": [
+      "招牌鐵板牛肉蓋飯(附蛋)",
+      "人氣鐵板豬肉蓋飯",
+      "巨飽雙拼雙份肉蓋飯",
+      "韓式泡菜牛肉蓋飯",
+      "現炒鐵板高麗菜/杏鮑菇"
+    ],
+    "mapX": 60,
+    "mapY": 40
+  },
+  {
+    "id": "store-37",
     "name": "芭樂咬一口（水果切盤）",
     "category": "shopping",
     "categoryLabel": "現切水果/飲品",
@@ -969,7 +997,7 @@
     "mapY": 43
   },
   {
-    "id": "store-37",
+    "id": "store-38",
     "name": "非你莫薯",
     "category": "snack",
     "categoryLabel": "炸物點心",
@@ -996,7 +1024,7 @@
     "mapY": 42
   },
   {
-    "id": "store-38",
+    "id": "store-39",
     "name": "佳佳豆花",
     "category": "snack",
     "categoryLabel": "手工甜品",
@@ -1023,7 +1051,7 @@
     "mapY": 43
   },
   {
-    "id": "store-39",
+    "id": "store-40",
     "name": "辰品屋豆漿",
     "category": "breakfast",
     "categoryLabel": "中式早宵夜",
@@ -1050,7 +1078,7 @@
     "mapY": 43
   },
   {
-    "id": "store-40",
+    "id": "store-41",
     "name": "駿哥炸魷魚大埔阿明分店",
     "category": "snack",
     "categoryLabel": "炸物海鮮",
@@ -1077,7 +1105,7 @@
     "mapY": 42
   },
   {
-    "id": "store-41",
+    "id": "store-42",
     "name": "蒸餃之家",
     "category": "meal",
     "categoryLabel": "中式麵點",
@@ -1104,7 +1132,7 @@
     "mapY": 44
   },
   {
-    "id": "store-42",
+    "id": "store-43",
     "name": "進爆快炒(大埔)店",
     "category": "meal",
     "categoryLabel": "熱炒便當/快炒",
@@ -1131,7 +1159,7 @@
     "mapY": 45
   },
   {
-    "id": "store-43",
+    "id": "store-44",
     "name": "泰冰涼-泰式奶茶專賣店",
     "category": "drink",
     "categoryLabel": "泰式飲品",
@@ -1158,7 +1186,7 @@
     "mapY": 46
   },
   {
-    "id": "store-44",
+    "id": "store-45",
     "name": "菜公店嘉義火雞肉飯",
     "category": "meal",
     "categoryLabel": "台味經典便當",
@@ -1185,7 +1213,7 @@
     "mapY": 47
   },
   {
-    "id": "store-45",
+    "id": "store-46",
     "name": "金村香噴噴三角骨",
     "category": "snack",
     "categoryLabel": "炸物小吃",
@@ -1212,7 +1240,7 @@
     "mapY": 48
   },
   {
-    "id": "store-46",
+    "id": "store-47",
     "name": "SinAn 炘安美學",
     "category": "beauty",
     "categoryLabel": "美業沙龍",
@@ -1239,7 +1267,7 @@
     "mapY": 48
   },
   {
-    "id": "store-47",
+    "id": "store-48",
     "name": "軍茶-彰化大埔店",
     "category": "drink",
     "categoryLabel": "人氣手搖",
@@ -1265,7 +1293,7 @@
     "mapY": 50
   },
   {
-    "id": "store-48",
+    "id": "store-49",
     "name": "龍鹽酥雞 彰化大埔店",
     "category": "snack",
     "categoryLabel": "炸物小吃",
@@ -1292,7 +1320,7 @@
     "mapY": 53
   },
   {
-    "id": "store-49",
+    "id": "store-50",
     "name": "熊熊想吃－窯烤披薩",
     "category": "meal",
     "categoryLabel": "義式披薩",
@@ -1319,7 +1347,7 @@
     "mapY": 54
   },
   {
-    "id": "store-50",
+    "id": "store-51",
     "name": "阿婆拉仔麵",
     "category": "breakfast",
     "categoryLabel": "傳統早午餐",
@@ -1346,7 +1374,7 @@
     "mapY": 56
   },
   {
-    "id": "store-51",
+    "id": "store-52",
     "name": "尚品芋圓（彰化大埔店）",
     "category": "snack",
     "categoryLabel": "手工甜品",
@@ -1373,7 +1401,7 @@
     "mapY": 56
   },
   {
-    "id": "store-52",
+    "id": "store-53",
     "name": "品茶道",
     "category": "drink",
     "categoryLabel": "人氣手搖",
@@ -1400,7 +1428,7 @@
     "mapY": 58
   },
   {
-    "id": "store-53",
+    "id": "store-54",
     "name": "嵐田拉麵",
     "category": "meal",
     "categoryLabel": "日式拉麵",
@@ -1428,7 +1456,7 @@
     "mapY": 57
   },
   {
-    "id": "store-54",
+    "id": "store-55",
     "name": "芊億飯包",
     "category": "meal",
     "categoryLabel": "傳統便當",
@@ -1455,7 +1483,7 @@
     "mapY": 58
   },
   {
-    "id": "store-55",
+    "id": "store-56",
     "name": "晶兆購商行",
     "category": "shopping",
     "categoryLabel": "生活美業/百貨",
@@ -1482,7 +1510,7 @@
     "mapY": 59
   },
   {
-    "id": "store-56",
+    "id": "store-57",
     "name": "清溪自助餐",
     "category": "meal",
     "categoryLabel": "主食便當",
@@ -1509,7 +1537,7 @@
     "mapY": 65
   },
   {
-    "id": "store-57",
+    "id": "store-58",
     "name": "五八地瓜球（大埔店）",
     "category": "snack",
     "categoryLabel": "銅板點心",
@@ -1536,7 +1564,7 @@
     "mapY": 63
   },
   {
-    "id": "store-58",
+    "id": "store-59",
     "name": "詠立水果行",
     "category": "shopping",
     "categoryLabel": "生鮮水果",
@@ -1562,7 +1590,7 @@
     "mapY": 65
   },
   {
-    "id": "store-59",
+    "id": "store-60",
     "name": "滿竹鹽滷豆花",
     "category": "snack",
     "categoryLabel": "手工甜品",
@@ -1589,7 +1617,7 @@
     "mapY": 26
   },
   {
-    "id": "store-60",
+    "id": "store-61",
     "name": "曦流咖啡 Solura Café",
     "category": "drink",
     "categoryLabel": "精品咖啡/輕食",
@@ -1616,7 +1644,7 @@
     "mapY": 12
   },
   {
-    "id": "store-61",
+    "id": "store-62",
     "name": "明美蔘藥行",
     "category": "shopping",
     "categoryLabel": "生活美業/蔘藥",
